@@ -1,0 +1,70 @@
+// src/data/projects/phoenix-soteria-fitness-tracker.json
+{
+  "slug": "phoenix-soteria-llc",
+  "title": "Phoenix Soteria LLC - AI-Powered Fitness & Wellness Tracker App",
+  "category": "Mobile App Development & AI",
+  "shortDescription": "A work-in-progress mobile application integrating AI to provide personalized fitness tracking, health insights, and promote mental well-being for a holistic approach to student and organizational wellness.",
+  "problemStatement": "The challenge is to develop a comprehensive mobile application for Phoenix Soteria LLC that goes beyond basic fitness tracking. It aims to offer personalized, AI-driven insights into both physical and mental well-being, fostering a holistic approach to health. The app is designed to provide users with actionable data and support for their wellness journey, potentially connecting to broader well-being initiatives within educational or organizational contexts.",
+  "myRole": "My contributions to this project include leading the mobile app development, designing the user interface and user experience (UI/UX) for intuitive interaction, implementing AI-driven insights for personalized tracking, and ensuring robust backend data synchronization. This is a work-in-progress, with core features actively under development.",
+  "technologiesUsed": [
+    "React Native",
+    "Python (for AI backend, e.g., Flask/FastAPI)",
+    "MongoDB/Firebase (for data storage - *specify your choice*)",
+    "HealthKit/Google Fit APIs (for fitness data integration - *specify if applicable*)"
+  ],
+  "solutionApproachDescription": "My approach focuses on creating an intuitive and engaging user experience for daily fitness tracking while leveraging AI for personalized recommendations and trend insights. The app prioritizes seamless data synchronization between devices and the backend. The interface is designed to be clear, visually appealing, and motivate user adherence. Ethical considerations around user data privacy and the secure handling of sensitive health information are paramount in the development process.",
+  "impactSummary": {
+    "overall": "This app is intended to transform personal wellness management by providing intelligent, actionable insights that empower users to achieve their fitness and mental well-being goals. It seeks to foster a healthier and more productive environment for individuals and organizations.",
+    "points": [
+      {
+        "stakeholder": "Users (Students/Individuals)",
+        "details": [
+          "Increased engagement with personal health data and proactive management of well-being, potentially reducing stress and improving focus.",
+          "Personalized guidance for fitness and mental health, leading to sustainable healthy habits."
+        ]
+      },
+      {
+        "stakeholder": "Organizations (e.g., Schools)",
+        "details": [
+          "Access to aggregated (anonymized) wellness trends for strategic health initiatives, potentially leading to improved overall organizational health and productivity metrics.",
+          "Potential for integration with educational well-being programs to foster a healthier learning and working environment."
+        ]
+      },
+      {
+        "stakeholder": "App/Platform",
+        "details": [
+          "Aims for high user adoption through intuitive design and highly personalized AI features.",
+          "Designed for scalability to support a growing user base and future feature expansions."
+        ]
+      }
+    ],
+    "specialNotes": "Due to the proprietary nature of this startup's core product and ongoing development, the full codebase for the Phoenix Soteria app is not publicly accessible. However, I would be pleased to discuss its architecture, specific technical implementations, and my code contributions in detail during an interview or a private demonstration."
+  },
+  "visualsAndDemos": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/1200x600/E0E0E0/000000?text=Phoenix+Soteria+App+Hero",
+      "alt": "Phoenix Soteria App Hero Screenshot"
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/embed/your-video-id",
+      "label": "App Walkthrough (WIP Demo)"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/C0C0C0/000000?text=App+Screenshot+1",
+      "alt": "Phoenix Soteria App Screenshot 1"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/D0D0D0/000000?text=App+Screenshot+2",
+      "alt": "Phoenix Soteria App Screenshot 2"
+    },
+    {
+      "type": "github",
+      "url": "[Link to your public GitHub repo for illustrative code snippets, if any]",
+      "label": "Illustrative Code Snippets (GitHub)"
+    }
+  ]
+}

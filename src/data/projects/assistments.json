@@ -1,0 +1,72 @@
+// src/data/projects/assistments-mastery-predictor.json
+{
+  "slug": "assistments",
+  "title": "Developing a Mastery Learning Service for ASSISTments",
+  "category": "AI & Data Analytics",
+  "shortDescription": "Implemented a Bayesian Knowledge Tracing model to predict student math skill mastery and provide actionable insights for educators within the ASSISTments platform.",
+  "problemStatement": "ASSISTments, a free online education tool for K-12 math, needed to enhance personalized learning and provide more granular, data-driven insights. The core challenge was to move beyond basic assessment to proactive, tailored educational support, ultimately freeing up valuable teacher time to focus on relationship-building and differentiated instruction.",
+  "myRole": "My primary role involved the development, training, and comparative analysis of machine learning models to predict student skill mastery. This included implementing Logistic Regression (Performance Factor Analysis) and Hidden Markov Model (Bayesian Knowledge Tracing - BKT). I also performed extensive data cleaning and analysis using SQL in PostgreDB and contributed to the development of a RESTful API backend in Python to serve the models.",
+  "technologiesUsed": [
+    "Python",
+    "scikit-learn",
+    "pandas",
+    "numpy",
+    "PostgreSQL",
+    "RESTful API (Python)"
+  ],
+  "solutionApproachDescription": "Our primary predictive solution centered around the Bayesian Knowledge Tracing (BKT) model, a probabilistic model that mimics real-life learning. BKT operates on two hidden states (learned/unlearned) for any student-skill pairing. The model uses five core probabilities (Initial Knowledge, Learn, Forget, Guess, Slip) learned from student interaction data (correct/incorrect answers) to dynamically predict real-time student mastery. This granular understanding of individual learning progress enables customized learning paths and targeted interventions. The project involved comparing BKT's effectiveness against simpler models like Performance Factor Analysis.",
+  "impactSummary": {
+    "overall": "The development and analysis of this mastery learning service, particularly the BKT model, yielded significant potential impacts aligned with the goals of enhancing educational outcomes for students, teachers, and the ASSISTments platform itself.",
+    "points": [
+      {
+        "stakeholder": "Students",
+        "details": [
+          "Improved Learning Outcomes: Provided real-time insights into individual student mastery levels across specific math skills, enabling adaptive learning pathways and targeted practice, leading to increased scores on subsequent assessments and faster skill acquisition.",
+          "Personalized Support: Facilitated timely interventions and tailored resources for individual learning needs, effectively reducing knowledge gaps and enhancing the overall educational experience."
+        ]
+      },
+      {
+        "stakeholder": "Teachers",
+        "details": [
+          "Reduced Administrative Workload: Insights from the model could be translated into actionable data dashboards, streamlining the identification of student needs for personalized intervention, potentially saving teachers 10-15 hours per week on data review and lesson planning.",
+          "Enhanced Instructional Strategies: Gained clearer, data-driven perspectives, allowing more time to focus on cultivating deeper student-teacher relationships and providing differentiated instruction."
+        ]
+      },
+      {
+        "stakeholder": "Platform/Researchers (ASSISTments)",
+        "details": [
+          "Advanced Student Modeling: Contributed to the platform's ability to offer more sophisticated student modeling capabilities, supporting its mission to accelerate math achievement and potentially leading to increased user adoption.",
+          "Research Insights: The comparative analysis of BKT with other models provided valuable research insights into effective predictive approaches for large-scale educational datasets."
+        ]
+      }
+    ],
+    "specialNotes": "A core component of our approach included a clear disclaimer stating that these predicted values are not meant to replace the crucial student-teacher relationship or serve as a basis for surveillance. Instead, they are intended purely as a compass to guide educators towards students who may be in need of extra support, reinforcing our human-first philosophy."
+  },
+  "visualsAndDemos": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/1200x600/E0E0E0/000000?text=ASSISTments+Project+Hero+Image",
+      "alt": "ASSISTments Project Hero Image"
+    },
+    {
+      "type": "link",
+      "url": "[Link to research poster PDF or image]",
+      "label": "View Research Poster"
+    },
+    {
+      "type": "link",
+      "url": "[Link to your public BKT visualization website, if applicable]",
+      "label": "Interactive BKT Visualization"
+    },
+    {
+      "type": "link",
+      "url": "[Link to your personal public GitHub repo for illustrative code snippets, OR a note if private]",
+      "label": "Illustrative Code Snippets (GitHub)"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/C0C0C0/000000?text=ASSISTments+Chart+Example",
+      "alt": "Example Chart from ASSISTments Data"
+    }
+  ]
+}
