@@ -37,7 +37,9 @@ interface ProjectDetailPageProps {
   params: {
     slug: string;
   };
-  // searchParams is part of PageProps, even if not used by this specific page.
+  // searchParams is part of PageProps for App Router pages.
+  // It's optional if you don't explicitly use it, but including it in the type signature
+  // AND destructuring it in the function makes the type system happy.
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
@@ -62,14 +64,14 @@ async function getProjectData(slug: string): Promise<ProjectDetail | null> {
     const fileContent = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(fileContent) as ProjectDetail; // Cast to our interface
   } catch (error) {
-    console.error(`Failed to load project data for slug: ${slug}`, error);
+    console.error(`Failed to load project data for slug: ${slug}:`, error);
     return null; // Return null if file not found or parsing fails
   }
 }
 
 // The main component for displaying an individual project.
 // It's an async Server Component, which means it can fetch data directly.
-export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) { // <-- Changed prop type here
+export default async function ProjectDetailPage({ params, searchParams }: ProjectDetailPageProps) { // <-- KEY CHANGE: Added searchParams to destructuring
   const project = await getProjectData(params.slug);
 
   // Handle case where project data might not be found
@@ -200,7 +202,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                   <iframe
                     src={item.url}
                     title={item.label || "Project Video Demo"}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-edited-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="w-full h-full"
                   ></iframe>
