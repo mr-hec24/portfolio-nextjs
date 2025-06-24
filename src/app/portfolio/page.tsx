@@ -34,9 +34,7 @@ interface ProjectDetail {
 // Define the correct props type for a dynamic page component in Next.js App Router
 // This is the most common and robust way to type it.
 interface ProjectDetailPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{slug: string}>;
   // searchParams can be an object with string keys and values that are string or array of strings, or undefined.
   searchParams?: { [key: string]: string | string[] | undefined };
 }
@@ -67,7 +65,7 @@ async function getProjectData(slug: string): Promise<ProjectDetail | null> {
 // We explicitly destructure both params and searchParams.
 // If searchParams is not used, ESLint might complain, but TypeScript will be happy.
 // To satisfy ESLint, we'll use a discard variable if it's truly unused.
-export default async function ProjectDetailPage({ params, _}: ProjectDetailPageProps) {
+export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   // Use a discard variable to acknowledge 'searchParams' if it's not directly used
   // This satisfies ESLint's 'no-unused-vars' rule.
   // const _searchParams = searchParams;
