@@ -1,7 +1,29 @@
-// src/app/portfolio/page.tsx
+// src/app/portfolio/page.ts// src/app/portfolio/page.tsx
 import { promises as fs } from 'fs';
 import path from 'path';
 import Link from 'next/link';
+
+// Define the types for the items within visualsAndDemos
+// This should match your JSON structure's 'visualsAndDemos' array elements
+interface VisualAndDemoItem {
+  type: 'image' | 'live_demo' | 'github' | 'video' | 'link';
+  src?: string;
+  alt?: string;
+  url?: string;
+  label?: string;
+}
+
+// Define the full ProjectDetail interface (can be a subset of the full one from [slug]/page.tsx
+// if you only need certain fields here)
+interface FullProjectData {
+    slug: string;
+    title: string;
+    category: string;
+    shortDescription: string;
+    visualsAndDemos: VisualAndDemoItem[]; // Add this
+    // Add other fields from your JSON if you use them in getAllProjects
+}
+
 
 // Simplified interface for listing projects
 interface ProjectListItem {
@@ -21,11 +43,13 @@ async function getAllProjects(): Promise<ProjectListItem[]> {
     filenames.map(async (filename) => {
       const filePath = path.join(projectsDirectory, filename);
       const fileContent = await fs.readFile(filePath, 'utf-8');
-      const data = JSON.parse(fileContent);
+      
+      // Explicitly cast the parsed JSON data to FullProjectData
+      const data: FullProjectData = JSON.parse(fileContent);
 
-      // Find the hero image if it exists for the thumbnail
+      // Now 'item' will be correctly typed as VisualAndDemoItem
       const heroVisual = data.visualsAndDemos.find(
-        (item: any) => item.type === 'image' && item.alt?.toLowerCase().includes('hero')
+        (item: VisualAndDemoItem) => item.type === 'image' && item.alt?.toLowerCase().includes('hero')
       );
 
       return {
