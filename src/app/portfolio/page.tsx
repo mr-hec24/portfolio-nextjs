@@ -69,9 +69,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   // Use a discard variable to acknowledge 'searchParams' if it's not directly used
   // This satisfies ESLint's 'no-unused-vars' rule.
   // const _searchParams = searchParams;
+    const resolvedParams = await params;
+    const { slug }  = resolvedParams;
 
-
-  const project = await getProjectData(params.slug);
+  const project = await getProjectData(slug);
 
   if (!project) {
     return (
