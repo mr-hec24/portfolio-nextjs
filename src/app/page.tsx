@@ -3,7 +3,7 @@ export default function Home() {
         <div>
             <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
                 Hello world, this is the main place!
-                <a href="/about/page.tsx">About me</a>
+                <a href="./about/page.tsx">About me</a>
                 <a href="/contact/page/tsx">Contact Me</a>
                 <a href="/portfolio/page.tsx">Portfolio</a>
             </main>
