@@ -33,7 +33,7 @@ interface ProjectDetail {
 
 // Define the correct props type for a dynamic page component in Next.js App Router
 // This is the most common and robust way to type it.
-type ProjectDetailPageProps = Promise<{slug: string[]}>;
+type ProjectDetailPageProps = Promise<{slug: string}>;
   // searchParams can be an object with string keys and values that are string or array of strings, or undefined.
   //searchParams?: { [key: string]: string | string[] | undefined };
 
