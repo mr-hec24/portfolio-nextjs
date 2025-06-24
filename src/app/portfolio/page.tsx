@@ -2,7 +2,7 @@
 
 import { promises as fs } from 'fs';
 import path from 'path';
-import Link from 'next/link'; // For linking to GitHub/Live Demos
+import Link from 'next/link';
 
 // Define the TypeScript interface that matches your generalized project JSON structure
 interface ProjectDetail {
@@ -20,25 +20,26 @@ interface ProjectDetail {
       stakeholder: string;
       details: string[];
     }>;
-    specialNotes?: string; // Optional for proprietary disclaimers etc.
+    specialNotes?: string;
   };
   visualsAndDemos: Array<{
     type: 'image' | 'live_demo' | 'github' | 'video' | 'link';
-    src?: string; // For images
-    alt?: string; // For images
-    url?: string; // For links, videos, live demos, github
-    label?: string; // For links, videos, live demos, github
+    src?: string;
+    alt?: string;
+    url?: string;
+    label?: string;
   }>;
 }
 
-// Define the correct interface for the page component's props in App Router
+// Define the correct props type for a dynamic page component in Next.js App Router
+// This is the most common and robust way to type it.
 interface ProjectDetailPageProps {
   params: {
     slug: string;
   };
+  // searchParams can be an object with string keys and values that are string or array of strings, or undefined.
   searchParams?: { [key: string]: string | string[] | undefined };
 }
-
 
 // generateStaticParams tells Next.js which static paths to build at compile time.
 export async function generateStaticParams() {
@@ -63,8 +64,15 @@ async function getProjectData(slug: string): Promise<ProjectDetail | null> {
 }
 
 // The main component for displaying an individual project.
-// KEY CHANGE: Renamed 'searchParams' to '_searchParams'
-export default async function ProjectDetailPage({ params, searchParams: _searchParams }: ProjectDetailPageProps) {
+// We explicitly destructure both params and searchParams.
+// If searchParams is not used, ESLint might complain, but TypeScript will be happy.
+// To satisfy ESLint, we'll use a discard variable if it's truly unused.
+export default async function ProjectDetailPage({ params, searchParams }: ProjectDetailPageProps) {
+  // Use a discard variable to acknowledge 'searchParams' if it's not directly used
+  // This satisfies ESLint's 'no-unused-vars' rule.
+  const _searchParams = searchParams;
+
+
   const project = await getProjectData(params.slug);
 
   if (!project) {
