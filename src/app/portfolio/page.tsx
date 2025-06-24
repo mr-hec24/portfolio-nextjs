@@ -32,49 +32,41 @@ interface ProjectDetail {
 }
 
 // Define the correct interface for the page component's props in App Router
-// This satisfies the internal PageProps constraint that Next.js uses.
 interface ProjectDetailPageProps {
   params: {
     slug: string;
   };
-  // searchParams is part of PageProps for App Router pages.
-  // It's optional if you don't explicitly use it, but including it in the type signature
-  // AND destructuring it in the function makes the type system happy.
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 
 // generateStaticParams tells Next.js which static paths to build at compile time.
-// This is essential for Static Site Generation (SSG) with dynamic routes in the App Router.
 export async function generateStaticParams() {
   const projectsDirectory = path.join(process.cwd(), 'src', 'data', 'projects');
   const filenames = await fs.readdir(projectsDirectory);
 
-  // Map each filename to a params object, stripping the .json extension
   return filenames.map((filename) => ({
     slug: filename.replace(/\.json$/, ''),
   }));
 }
 
 // getProjectData fetches the content for a specific project based on its slug.
-// This function runs at build time (or on demand if not all paths are pre-generated).
 async function getProjectData(slug: string): Promise<ProjectDetail | null> {
   try {
     const filePath = path.join(process.cwd(), 'src', 'data', 'projects', `${slug}.json`);
     const fileContent = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(fileContent) as ProjectDetail; // Cast to our interface
+    return JSON.parse(fileContent) as ProjectDetail;
   } catch (error) {
     console.error(`Failed to load project data for slug: ${slug}:`, error);
-    return null; // Return null if file not found or parsing fails
+    return null;
   }
 }
 
 // The main component for displaying an individual project.
-// It's an async Server Component, which means it can fetch data directly.
-export default async function ProjectDetailPage({ params, searchParams }: ProjectDetailPageProps) { // <-- KEY CHANGE: Added searchParams to destructuring
+// KEY CHANGE: Renamed 'searchParams' to '_searchParams'
+export default async function ProjectDetailPage({ params, searchParams: _searchParams }: ProjectDetailPageProps) {
   const project = await getProjectData(params.slug);
 
-  // Handle case where project data might not be found
   if (!project) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-8 bg-gray-100 rounded-lg shadow-md m-8">
@@ -87,7 +79,6 @@ export default async function ProjectDetailPage({ params, searchParams }: Projec
     );
   }
 
-  // Find the hero image from the visualsAndDemos array if it exists
   const heroImage = project.visualsAndDemos.find(
     (item) => item.type === 'image' && item.alt?.toLowerCase().includes('hero')
   );
@@ -106,7 +97,7 @@ export default async function ProjectDetailPage({ params, searchParams }: Projec
           src={heroImage.src}
           alt={heroImage.alt}
           className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
-          style={{ maxHeight: '600px' }} // Cap the height for consistency
+          style={{ maxHeight: '600px' }}
         />
       )}
 
