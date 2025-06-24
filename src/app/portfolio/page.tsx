@@ -36,7 +36,7 @@ interface ProjectDetail {
 interface ProjectDetailPageProps {
   params: Promise<{slug: string}>;
   // searchParams can be an object with string keys and values that are string or array of strings, or undefined.
-  searchParams?: { [key: string]: string | string[] | undefined };
+  //searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 // generateStaticParams tells Next.js which static paths to build at compile time.
@@ -60,6 +60,8 @@ async function getProjectData(slug: string): Promise<ProjectDetail | null> {
     return null;
   }
 }
+
+//type Params = Promise
 
 // The main component for displaying an individual project.
 // We explicitly destructure both params and searchParams.
