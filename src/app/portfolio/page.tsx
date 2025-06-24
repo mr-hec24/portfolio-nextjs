@@ -67,10 +67,10 @@ async function getProjectData(slug: string): Promise<ProjectDetail | null> {
 // We explicitly destructure both params and searchParams.
 // If searchParams is not used, ESLint might complain, but TypeScript will be happy.
 // To satisfy ESLint, we'll use a discard variable if it's truly unused.
-export default async function ProjectDetailPage({ params, searchParams }: ProjectDetailPageProps) {
+export default async function ProjectDetailPage({ params, _}: ProjectDetailPageProps) {
   // Use a discard variable to acknowledge 'searchParams' if it's not directly used
   // This satisfies ESLint's 'no-unused-vars' rule.
-  const _searchParams = searchParams;
+  // const _searchParams = searchParams;
 
 
   const project = await getProjectData(params.slug);
