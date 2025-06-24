@@ -1,104 +1,215 @@
-// src/app/portfolio/page.ts// src/app/portfolio/page.tsx
+// src/app/portfolio/[slug]/page.tsx
+
 import { promises as fs } from 'fs';
 import path from 'path';
-import Link from 'next/link';
+import Link from 'next/link'; // For linking to GitHub/Live Demos
 
-// Define the types for the items within visualsAndDemos
-// This should match your JSON structure's 'visualsAndDemos' array elements
-interface VisualAndDemoItem {
-  type: 'image' | 'live_demo' | 'github' | 'video' | 'link';
-  src?: string;
-  alt?: string;
-  url?: string;
-  label?: string;
-}
-
-// Define the full ProjectDetail interface (can be a subset of the full one from [slug]/page.tsx
-// if you only need certain fields here)
-interface FullProjectData {
-    slug: string;
-    title: string;
-    category: string;
-    shortDescription: string;
-    visualsAndDemos: VisualAndDemoItem[]; // Add this
-    // Add other fields from your JSON if you use them in getAllProjects
-}
-
-
-// Simplified interface for listing projects
-interface ProjectListItem {
+// Define the TypeScript interface that matches your generalized project JSON structure
+interface ProjectDetail {
   slug: string;
   title: string;
   category: string;
   shortDescription: string;
-  heroImageSrc?: string; // Optional: to display a small hero image on the list page
+  problemStatement: string;
+  myRole: string;
+  technologiesUsed: string[];
+  solutionApproachDescription: string;
+  impactSummary: {
+    overall: string;
+    points: Array<{
+      stakeholder: string;
+      details: string[];
+    }>;
+    specialNotes?: string; // Optional for proprietary disclaimers etc.
+  };
+  visualsAndDemos: Array<{
+    type: 'image' | 'live_demo' | 'github' | 'video' | 'link';
+    src?: string; // For images
+    alt?: string; // For images
+    url?: string; // For links, videos, live demos, github
+    label?: string; // For links, videos, live demos, github
+  }>;
 }
 
-// Function to get all project data for the listing page
-async function getAllProjects(): Promise<ProjectListItem[]> {
+// Define the correct interface for the page component's props in App Router
+// This satisfies the internal PageProps constraint that Next.js uses.
+interface ProjectDetailPageProps {
+  params: {
+    slug: string;
+  };
+  // searchParams is part of PageProps, even if not used by this specific page.
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+
+// generateStaticParams tells Next.js which static paths to build at compile time.
+// This is essential for Static Site Generation (SSG) with dynamic routes in the App Router.
+export async function generateStaticParams() {
   const projectsDirectory = path.join(process.cwd(), 'src', 'data', 'projects');
   const filenames = await fs.readdir(projectsDirectory);
 
-  const projects = await Promise.all(
-    filenames.map(async (filename) => {
-      const filePath = path.join(projectsDirectory, filename);
-      const fileContent = await fs.readFile(filePath, 'utf-8');
-      
-      // Explicitly cast the parsed JSON data to FullProjectData
-      const data: FullProjectData = JSON.parse(fileContent);
-
-      // Now 'item' will be correctly typed as VisualAndDemoItem
-      const heroVisual = data.visualsAndDemos.find(
-        (item: VisualAndDemoItem) => item.type === 'image' && item.alt?.toLowerCase().includes('hero')
-      );
-
-      return {
-        slug: data.slug,
-        title: data.title,
-        category: data.category,
-        shortDescription: data.shortDescription,
-        heroImageSrc: heroVisual ? heroVisual.src : undefined,
-      };
-    })
-  );
-  return projects;
+  // Map each filename to a params object, stripping the .json extension
+  return filenames.map((filename) => ({
+    slug: filename.replace(/\.json$/, ''),
+  }));
 }
 
-// Main Portfolio Page Component
-export default async function PortfolioPage() {
-  const projects = await getAllProjects();
+// getProjectData fetches the content for a specific project based on its slug.
+// This function runs at build time (or on demand if not all paths are pre-generated).
+async function getProjectData(slug: string): Promise<ProjectDetail | null> {
+  try {
+    const filePath = path.join(process.cwd(), 'src', 'data', 'projects', `${slug}.json`);
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(fileContent) as ProjectDetail; // Cast to our interface
+  } catch (error) {
+    console.error(`Failed to load project data for slug: ${slug}`, error);
+    return null; // Return null if file not found or parsing fails
+  }
+}
+
+// The main component for displaying an individual project.
+// It's an async Server Component, which means it can fetch data directly.
+export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) { // <-- Changed prop type here
+  const project = await getProjectData(params.slug);
+
+  // Handle case where project data might not be found
+  if (!project) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-8 bg-gray-100 rounded-lg shadow-md m-8">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Project Not Found</h1>
+        <p className="text-lg text-gray-600">The project you are looking for does not exist or an error occurred.</p>
+        <Link href="/portfolio" className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300">
+          Back to Portfolio
+        </Link>
+      </div>
+    );
+  }
+
+  // Find the hero image from the visualsAndDemos array if it exists
+  const heroImage = project.visualsAndDemos.find(
+    (item) => item.type === 'image' && item.alt?.toLowerCase().includes('hero')
+  );
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">My Projects</h1>
+    <div className="container mx-auto px-4 py-8 max-w-5xl">
+      <header className="text-center mb-10 p-6 bg-white rounded-lg shadow-lg">
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-2 leading-tight">
+          {project.title}
+        </h1>
+        <p className="text-xl text-indigo-700 font-medium">{project.category}</p>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <div key={project.slug} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
-            <Link href={`/portfolio/${project.slug}`} className="block">
-              {project.heroImageSrc ? (
+      {heroImage && (
+        <img
+          src={heroImage.src}
+          alt={heroImage.alt}
+          className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
+          style={{ maxHeight: '600px' }} // Cap the height for consistency
+        />
+      )}
+
+      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
+        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
+          Problem Statement & Overview
+        </h2>
+        <p className="text-lg text-gray-700 mb-4 leading-relaxed">{project.problemStatement}</p>
+      </section>
+
+      <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
+        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
+          My Role & Contributions
+        </h2>
+        <p className="text-lg text-indigo-900 leading-relaxed">{project.myRole}</p>
+      </section>
+
+      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
+        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
+          Technologies Used
+        </h2>
+        <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
+          {project.technologiesUsed.map((tech, index) => (
+            <li key={index} className="flex items-start">
+              <span className="mr-2 text-indigo-600">&bull;</span> {tech}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
+        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
+          Solution & Approach
+        </h2>
+        <p className="text-lg text-indigo-900 leading-relaxed">{project.solutionApproachDescription}</p>
+      </section>
+
+      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
+        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
+          Impact & Results (Intended)
+        </h2>
+        <p className="text-lg text-gray-700 mb-6 leading-relaxed">{project.impactSummary.overall}</p>
+
+        <div className="space-y-6">
+          {project.impactSummary.points.map((pointGroup, index) => (
+            <div key={index} className="p-4 bg-gray-50 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">
+                For {pointGroup.stakeholder}:
+              </h3>
+              <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
+                {pointGroup.details.map((detail, detailIndex) => (
+                  <li key={detailIndex} className="flex items-start">
+                    <span className="mr-2 text-green-600">&check;</span> {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        {project.impactSummary.specialNotes && (
+          <p className="mt-8 p-4 bg-yellow-50 border border-yellow-200 text-yellow-800 rounded-lg text-md italic leading-relaxed">
+            <span className="font-semibold">Note:</span> {project.impactSummary.specialNotes}
+          </p>
+        )}
+      </section>
+
+      <section className="p-8 bg-indigo-50 rounded-xl shadow-lg">
+        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
+          Visuals & Demos
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
+          {project.visualsAndDemos.map((item, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              {item.type === 'image' && item.src && (
                 <img
-                  src={project.heroImageSrc}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
+                  src={item.src}
+                  alt={item.alt || `Project visual ${index + 1}`}
+                  className="w-full h-48 object-cover rounded-lg shadow-md mb-3"
                 />
-              ) : (
-                <div className="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-center text-sm p-4">
-                  No Image Available
+              )}
+              {(item.type === 'live_demo' || item.type === 'github' || item.type === 'link') && item.url && (
+                <Link
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium"
+                >
+                  {item.label || item.type.replace('_', ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} &rarr;
+                </Link>
+              )}
+              {item.type === 'video' && item.url && (
+                <div className="w-full aspect-video rounded-lg shadow-md overflow-hidden">
+                  <iframe
+                    src={item.url}
+                    title={item.label || "Project Video Demo"}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-edited-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
                 </div>
               )}
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h2>
-                <p className="text-indigo-600 text-sm mb-3">{project.category}</p>
-                <p className="text-gray-700 text-base mb-4">{project.shortDescription}</p>
-                <span className="inline-block mt-2 text-indigo-600 hover:text-indigo-800 font-medium border-b-2 border-indigo-600 pb-1">
-                  Learn More &rarr;
-                </span>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
