@@ -1,7 +1,6 @@
 // src/app/contact/page.tsx
 
 import React from "react";
-import Link from "next/link";
 
 const ContactPage: React.FC = () => {
     return (
@@ -29,7 +28,7 @@ const ContactPage: React.FC = () => {
                         <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">
                             Email Me
                         </h3>
-                        <a
+                        <a 
                             href="mailto:your.email@example.com" // IMPORTANT: Replace with your actual professional email
                             className="text-indigo-600 hover:text-indigo-800 text-lg font-medium transition-colors duration-200 break-words"
                         >
@@ -45,13 +44,13 @@ const ContactPage: React.FC = () => {
                             Connect Professionally
                         </h3>
                         <div className="flex justify-center space-x-6 text-3xl">
-                            <Link
+                            <a 
                                 href="https://linkedin.com/in/your-linkedin-profile"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
                             >
-                                <span className="sr-only">LinkedIn</span>
+                                <span className="sr-only">aedIn</span>
                                 <svg
                                     className="w-8 h-8"
                                     fill="currentColor"
@@ -60,8 +59,8 @@ const ContactPage: React.FC = () => {
                                 >
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
-                            </Link>
-                            <Link
+                            </a>
+                            <a
                                 href="https://github.com/your-github-username"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -80,7 +79,7 @@ const ContactPage: React.FC = () => {
                                         clipRule="evenodd"
                                     />
                                 </svg>
-                            </Link>
+                            </a>
                         </div>
                         <p className="text-sm text-gray-500 mt-2">
                             Connect with me on social media.
