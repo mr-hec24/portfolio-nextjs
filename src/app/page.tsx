@@ -8,9 +8,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-800 p-4">
       <main className="max-w-4xl text-center p-8 bg-white rounded-xl shadow-2xl space-y-8 animate-fade-in">
-        {/* Optional: Your Professional Headshot */}
-        {/* If you want your headshot here, uncomment and replace src */}
-        {/*
         <Image
           src="https://placehold.co/150x150/E0E0E0/000000?text=Your+Photo" // Replace with your image path
           alt="Hector A. Rodriguez"
@@ -18,7 +15,6 @@ export default function HomePage() {
           height={150}
           className="rounded-full shadow-lg border-4 border-indigo-300 mx-auto mb-4"
         />
-        */}
 
         <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-4">
           Hector A. Rodriguez
