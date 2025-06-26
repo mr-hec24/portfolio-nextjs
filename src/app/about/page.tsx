@@ -79,7 +79,7 @@ const AboutPage: React.FC = () => {
           View My Portfolio &rarr;
         </Link>
         <Link
-          href="/contact" {/* Assuming you'll create a contact page later */}
+          href="/contact" // Assuming you'll create a contact page later
           className="inline-block px-8 py-4 bg-white text-gray-800 text-xl font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300 border border-gray-800"
         >
           Get in Touch
