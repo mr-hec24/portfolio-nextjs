@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => {
                             href="mailto:your.email@example.com" // IMPORTANT: Replace with your actual professional email
                             className="text-indigo-600 hover:text-indigo-800 text-lg font-medium transition-colors duration-200 break-words"
                         >
-                            your.email@example.com
+                            harmandorod24@gmail.com
                         </a>
                         <p className="text-sm text-gray-500 mt-2">
                             I aim to respond within 24-48 hours.
@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
                         </h3>
                         <div className="flex justify-center space-x-6 text-3xl">
                             <a 
-                                href="https://linkedin.com/in/your-linkedin-profile"
+                                href="https://linkedin.com/in/hector-a-rodriguez24"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
@@ -61,7 +61,7 @@ const ContactPage: React.FC = () => {
                                 </svg>
                             </a>
                             <a
-                                href="https://github.com/your-github-username"
+                                href="https://github.com/mr-hec24"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-800 hover:text-gray-600 transition-colors duration-200"
