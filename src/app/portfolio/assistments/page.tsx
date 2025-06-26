@@ -29,7 +29,7 @@ const AssistmentsProjectPage: React.FC = () => {
           ASSISTments is a widely used, free online education tool primarily designed for K-12 math instruction. It serves as a formative assessment platform that provides immediate feedback to students as they work through problems and offers real-time learning data to teachers. It also supports high-impact tutoring programs by integrating traditional learning materials with powerful digital tools.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed">
-          The core challenge addressed by this project was to enhance personalized learning and provide more granular, data-driven insights for teachers, schools, and researchers. By implementing a mastery learning service that accurately tracks and predicts student knowledge in real-time, we aimed to move beyond basic assessment to proactive, tailored educational support. The goal was to bridge the gap between students' current understanding and their potential for mastery, ultimately freeing up valuable teacher time to focus on relationship-building and differentiated instruction.
+          The core challenge addressed by this project was to enhance personalized learning and provide more granular, data-driven insights for teachers, schools, and researchers. By implementing a mastery learning service that accurately tracks and predicts student knowledge in real-time, we aimed to move beyond basic assessment to proactive, tailored educational support. The goal was to bridge the gap between students&apos; current understanding and their potential for mastery, ultimately freeing up valuable teacher time to focus on relationship-building and differentiated instruction.
         </p>
       </section>
 
@@ -62,7 +62,7 @@ const AssistmentsProjectPage: React.FC = () => {
           <li><strong>Machine Learning Libraries:</strong> scikit-learn, numpy</li>
           <li><strong>Data Manipulation:</strong> pandas</li>
           <li><strong>Database:</strong> PostgreSQL (for SQL querying and data management)</li>
-          <li><strong>Web Framework (for API):</strong> [Specify if you used Flask, Django, FastAPI, etc., or state 'custom RESTful API']</li>
+          <li><strong>Web Framework (for API):</strong> custom Python</li>
         </ul>
       </section>
 
@@ -74,7 +74,7 @@ const AssistmentsProjectPage: React.FC = () => {
           Our primary predictive solution centered around the **Bayesian Knowledge Tracing (BKT) model**, a probabilistic model rooted in cognitive science that mimics real-life learning processes. BKT operates on two unobserved (hidden) states for any given student-skill pairing: either the student has **not yet learned** the skill, or they **have learned** it.
         </p>
         <p className="text-lg text-indigo-900 mb-4 leading-relaxed">
-          The model uses five core probabilities, learned from student interaction data, to track a student's knowledge state over time:
+          The model uses five core probabilities, learned from student interaction data, to track a student$apos;s knowledge state over time:
         </p>
         <ol className="list-decimal list-inside ml-6 text-lg text-indigo-900 space-y-2">
           <li>
@@ -94,7 +94,7 @@ const AssistmentsProjectPage: React.FC = () => {
           </li>
         </ol>
         <p className="text-lg text-indigo-900 mt-4 leading-relaxed">
-          By continuously updating these probabilities based on a student's sequence of correct or incorrect answers within ASSISTments, the BKT model provides a dynamic, real-time prediction of whether a student has mastered a particular skill. This allows for a granular understanding of individual learning progress.
+          By continuously updating these probabilities based on a student$apos;s sequence of correct or incorrect answers within ASSISTments, the BKT model provides a dynamic, real-time prediction of whether a student has mastered a particular skill. This allows for a granular understanding of individual learning progress.
         </p>
       </section>
 
@@ -111,10 +111,10 @@ const AssistmentsProjectPage: React.FC = () => {
             <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">For Students:</h3>
             <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
               <li>
-                <strong>Improved Learning Outcomes:</strong> By providing real-time insights into individual student mastery levels, the model could enable adaptive learning pathways, ensuring students receive targeted practice on concepts they haven't yet mastered. This was designed to lead to increased scores on subsequent assessments and faster skill acquisition.
+                <strong>Improved Learning Outcomes:</strong> By providing real-time insights into individual student mastery levels, the model could enable adaptive learning pathways, ensuring students receive targeted practice on concepts they haven&apos;t yet mastered. This was designed to lead to increased scores on subsequent assessments and faster skill acquisition.
               </li>
               <li>
-                <strong>Personalized Support:</strong> The system's ability to identify specific knowledge gaps would allow for timely interventions and tailored resources, effectively reducing learning barriers and enhancing the student's overall educational experience.
+                <strong>Personalized Support:</strong> The system&apos;s ability to identify specific knowledge gaps would allow for timely interventions and tailored resources, effectively reducing learning barriers and enhancing the student&apos;s overall educational experience.
               </li>
             </ul>
           </div>
@@ -135,7 +135,7 @@ const AssistmentsProjectPage: React.FC = () => {
             <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">For ASSISTments (Platform/Researchers):</h3>
             <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
               <li>
-                <strong>Advanced Student Modeling:</strong> Our work contributed to the platform's ability to offer more sophisticated student modeling capabilities, directly supporting its mission to accelerate math achievement. This enhanced functionality could lead to **increased user adoption** by demonstrating cutting-edge pedagogical support.
+                <strong>Advanced Student Modeling:</strong> Our work contributed to the platform&apos;s ability to offer more sophisticated student modeling capabilities, directly supporting its mission to accelerate math achievement. This enhanced functionality could lead to **increased user adoption** by demonstrating cutting-edge pedagogical support.
               </li>
               <li>
                 <strong>Research Insights:</strong> The comparative analysis of BKT with Performance Factor Analysis provided valuable research insights into the most effective predictive approaches for the large-scale ASSISTments dataset, informing future development.
