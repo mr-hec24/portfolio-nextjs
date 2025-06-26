@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 const AboutPage: React.FC = () => {
   return (
+    // This is the SINGLE root JSX element that the component returns.
+    // All other content must be nested inside this div.
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <header className="text-center mb-10 p-6 bg-white rounded-lg shadow-lg">
         <h1 className="text-5xl font-extrabold text-gray-900 mb-2 leading-tight">
@@ -82,13 +84,8 @@ const AboutPage: React.FC = () => {
         >
           Get in Touch
         </Link>
-        {/* Optional: Add social media links here */}
-        {/* <div className="mt-8 text-2xl space-x-6">
-            <a href="https://linkedin.com/in/hectorarodriguez" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-indigo-600 transition-colors"><i className="fab fa-linkedin"></i></a>
-            <a href="https://github.com/mr-hec24" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-indigo-600 transition-colors"><i className="fab fa-github"></i></a>
-        </div> */}
       </section>
-    </div>
+    </div> // This closing div tag must be present and correctly match the opening one
   );
 };
 
