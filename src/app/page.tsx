@@ -47,10 +47,6 @@ export default function HomePage() {
         </div>
       </main>
 
-      {/* Basic footer for the landing page */}
-      <footer className="mt-12 text-gray-600 text-sm">
-        &copy; {new Date().getFullYear()} Hector A. Rodriguez. All rights reserved.
-      </footer>
     </div>
   );
 }
