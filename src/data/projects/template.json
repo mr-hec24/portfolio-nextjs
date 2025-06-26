@@ -1,0 +1,77 @@
+// src/data/projects/your-project-slug.json
+{
+  "slug": "template", // Unique identifier for the URL (lowercase, hyphen-separated)
+  "title": "Your Project Title Here",
+  "category": "Project Category (e.g., AI & Data Analytics, Web Development, Mobile App)",
+  "shortDescription": "A concise, one-sentence summary of the project.", // For list views
+  "problemStatement": "Describe the core problem or need this project addressed.",
+  "myRole": "Detail your specific contributions and responsibilities.",
+  "technologiesUsed": [
+    "Tech 1",
+    "Tech 2",
+    "Tech 3"
+  ],
+  "solutionApproachDescription": "Explain how you approached the solution, including your design philosophy or technical strategy. This is where you describe the BKT model, responsive design, or app UX.",
+  "impactSummary": {
+    "overall": "Summarize the overarching impact or intended outcome of the project.",
+    "points": [
+      {
+        "stakeholder": "Students",
+        "details": [
+          "Specific measurable or qualitative improvement 1 (e.g., 'Improved learning outcomes... 15-20% improvement in subject mastery')",
+          "Specific measurable or qualitative improvement 2"
+        ]
+      },
+      {
+        "stakeholder": "Teachers",
+        "details": [
+          "Specific measurable or qualitative improvement 1 (e.g., 'Reduced administrative workload... saving up to 10-15 hours per week')",
+          "Specific measurable or qualitative improvement 2"
+        ]
+      },
+      {
+        "stakeholder": "Organizations",
+        "details": [
+          "Specific measurable or qualitative improvement 1 (e.g., 'Increased funding opportunities... support grant applications')",
+          "Specific measurable or qualitative improvement 2"
+        ]
+      },
+      {
+        "stakeholder": "Website/App/Platform",
+        "details": [
+          "Specific measurable or qualitative improvement 1 (e.g., 'Improved accessibility... adherence to WCAG standards')",
+          "Specific measurable or qualitative improvement 2"
+        ]
+      }
+    ],
+    "specialNotes": "Optional: Add a note here for proprietary code, ethical considerations, or any other important disclaimers."
+  },
+  "visualsAndDemos": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/1200x600/E0E0E0/000000?text=Project+Hero+Image",
+      "alt": "Main project hero image"
+    },
+    {
+      "type": "live_demo",
+      "url": "https://your-live-demo-link.com",
+      "label": "View Live Demo"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/your-repo",
+      "label": "GitHub Repository"
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/embed/your-video-id",
+      "label": "Video Walkthrough"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/C0C0C0/000000?text=Screenshot+1",
+      "alt": "Key feature screenshot 1"
+    }
+    // You can add more image, video, live_demo, github types as needed
+  ]
+}

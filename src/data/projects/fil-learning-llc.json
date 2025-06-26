@@ -1,0 +1,56 @@
+// src/data/projects/fall-in-love-learning.json
+{
+  "slug": "fil-learning-llc",
+  "title": "Fall In Love Learning LLC - Tutoring Company Website",
+  "category": "Web Development",
+  "shortDescription": "A professional and inviting static landing page developed to establish an online presence for a new tutoring venture, providing information and free college application resources.",
+  "problemStatement": "This landing page allowed an easy place for customers to learn more about the company, see rates, services, and tutors. It also provided free resources for students applying to college. The primary goal was to establish a professional and inviting online presence for a new tutoring venture, making information easily accessible and attracting potential clients.",
+  "myRole": "I was solely responsible for the end-to-end development of this static website, including front-end design and implementation.",
+  "technologiesUsed": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap"
+  ],
+  "solutionApproachDescription": "My design philosophy centered on user-friendliness and visual appeal. I ensured the website was easy to understand and navigate by developing a color scheme that is easy on the eyes and reflects the educational brand. I prioritized spacing out content intentionally to avoid clutter and improve readability. Clear navigation options for various sections (rates, services, tutors, resources) were provided to enhance user experience. Leveraging Bootstrap for responsive design ensured optimal viewing and functionality across various devices (desktop, tablet, mobile).",
+  "impactSummary": {
+    "overall": "The website was instrumental in establishing an immediate online credibility and professional storefront for the Fall In Love Learning LLC startup.",
+    "points": [
+      {
+        "stakeholder": "Website/App/Platform",
+        "details": [
+          "Intended to increase customer acquisition by 20% by serving as the primary touchpoint for new client inquiries and service exploration.",
+          "Intended to increase engagement with educational resources by 30% by providing a dedicated, easily navigable section for free college application guides and student resources, fostering community value and perceived expertise.",
+          "Improved accessibility was a core design goal, ensuring a wider audience could access the information."
+        ]
+      }
+    ]
+  },
+  "visualsAndDemos": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/1200x600/E0E0E0/000000?text=Fall+In+Love+Learning+Website+Hero",
+      "alt": "Fall In Love Learning Website Hero Screenshot"
+    },
+    {
+      "type": "live_demo",
+      "url": "https://mr-hec24.github.io/FIL_Learning/",
+      "label": "View Live Demo"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/mr-hec24/FIL_Learning",
+      "label": "GitHub Repository"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/C0C0C0/000000?text=FIL+Screenshot+1",
+      "alt": "Fall In Love Learning Screenshot 1"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/D0D0D0/000000?text=FIL+Screenshot+2",
+      "alt": "Fall In Love Learning Screenshot 2"
+    }
+  ]
+}
