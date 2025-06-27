@@ -14,7 +14,7 @@ export default function PortfolioPage() {
                 {/* ASSISTments Project Card */}
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
                     <Link href="/portfolio/assistments" className="block">
-                        <img src="/images/portfolio/assistements-hero.png"></img>
+                        <img src="/images/portfolio/assistments-hero.png"></img>
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
                                 Developing a Mastery Learning Service for ASSISTments
