@@ -19,7 +19,7 @@ const AboutPage: React.FC = () => {
       <section className="mb-12 p-8 bg-white rounded-xl shadow-lg flex flex-col items-center">
         {/* Your Professional Headshot */}
         <Image
-          src="https://placehold.co/300x300/E0E0E0/000000?text=Your+Professional+Headshot" // Replace with your image path
+          src="/images/about/hector-2.jpg" // Replace with your image path
           alt="Hector A. Rodriguez Professional Headshot"
           width={300} // Set appropriate width for optimization
           height={300} // Set appropriate height for optimization
