@@ -15,7 +15,7 @@ const PhoenixSoteriaProjectPage: React.FC = () => {
 
       {/* Hero Image Placeholder */}
       <img
-        src="https://placehold.co/1200x600/E0E0E0/000000?text=Phoenix+Soteria+App+Hero"
+        src="/images/portfolio/phoenix-soteria-hero.png" 
         alt="Phoenix Soteria App Hero Screenshot"
         className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
         style={{ maxHeight: '600px' }}

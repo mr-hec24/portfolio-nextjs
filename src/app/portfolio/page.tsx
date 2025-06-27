@@ -54,11 +54,7 @@ export default function PortfolioPage() {
                 {/* Phoenix Soteria Project Card */}
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
                     <Link href="/portfolio/phoenix-soteria" className="block">
-                        {/* You can replace this div with a small project image/thumbnail if you have one */}
-                        <div className="w-full h-48 bg-purple-200 flex items-center justify-center text-gray-700 text-center text-lg font-semibold p-4">
-                            Mobile App Development & AI
-                            {/* Optional: <img src="/images/phoenix-thumbnail.jpg" alt="Phoenix Soteria thumbnail" className="w-full h-full object-cover" /> */}
-                        </div>
+                       <img src="/images/portfolio/phoenix-soteria-hero.png"></img> 
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
                                 Phoenix Soteria LLC - AI-Powered Fitness & Wellness Tracker App
