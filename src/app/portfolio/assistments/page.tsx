@@ -15,7 +15,7 @@ const AssistmentsProjectPage: React.FC = () => {
 
       {/* Hero Image Placeholder */}
       <img
-        src="https://placehold.co/1200x600/E0E0E0/000000?text=ASSISTments+Project+Hero"
+        src="/images/portfolio/assistments-hero.png"
         alt="ASSISTments Project Hero Screenshot"
         className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
         style={{ maxHeight: '600px' }}
@@ -155,7 +155,7 @@ const AssistmentsProjectPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
           <div className="flex flex-col items-center text-center">
             <Link
-              href="[Link to research poster PDF or image]"
+              href="/images/portfolio/assistments-research-poster.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium"
@@ -166,7 +166,7 @@ const AssistmentsProjectPage: React.FC = () => {
           </div>
           <div className="flex flex-col items-center text-center">
             <Link
-              href="[Link to your public BKT visualization website, if applicable]"
+              href="https://www.cs.williams.edu/~iris/res/bkt-balloon/index.html"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium"
@@ -175,20 +175,8 @@ const AssistmentsProjectPage: React.FC = () => {
             </Link>
             <p className="text-gray-700 text-sm mt-2">Live demonstration of the BKT model</p>
           </div>
-          <div className="flex flex-col items-center text-center">
-            <Link
-              href="[Link to your personal public GitHub repo for relevant code, or a note about private code]"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium"
-            >
-              Illustrative Code Snippets (GitHub) &rarr;
-            </Link>
-            <p className="text-gray-700 text-sm mt-2">Selected non-proprietary code examples</p>
-          </div>
-          {/* Add more image/chart placeholders as needed */}
           <div className="flex flex-col items-center text-center md:col-span-1">
-            <img src="https://placehold.co/600x400/C0C0C0/000000?text=ASSISTments+Chart+Example" alt="Example Chart from ASSISTments Data" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
+            <img src="/images/portfolio/assistments-research-poster.pdf" alt="Example Chart from ASSISTments Data" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
             <p className="text-gray-700 text-sm">Example Data Visualization</p>
           </div>
         </div>
