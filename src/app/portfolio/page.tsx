@@ -38,11 +38,7 @@ export default function PortfolioPage() {
                 {/* Fall In Love Learning Project Card */}
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
                     <Link href="/portfolio/fil-learning" className="block">
-                        {/* You can replace this div with a small project image/thumbnail if you have one */}
-                        <div className="w-full h-48 bg-green-200 flex items-center justify-center text-gray-700 text-center text-lg font-semibold p-4">
-                            Web Development
-                            {/* Optional: <img src="/images/fil-thumbnail.jpg" alt="Fall In Love Learning thumbnail" className="w-full h-full object-cover" /> */}
-                        </div>
+                        <img src="/images/portfolio/fil-learning-hero.png"></img>
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
                                 Fall In Love Learning LLC - Tutoring Company Website

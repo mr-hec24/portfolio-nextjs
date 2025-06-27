@@ -129,11 +129,11 @@ const FallInLoveLearningProjectPage: React.FC = () => {
           </div>
           {/* Add more image placeholders for specific sections */}
           <div className="flex flex-col items-center text-center">
-            <img src="https://placehold.co/600x400/C0C0C0/000000?text=FIL+Screenshot+1" alt="Fall In Love Learning Screenshot 1" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
+            <img src="/images/portfolio/fil-learning-services.png" alt="Fall In Love Learning Screenshot 1" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
             <p className="text-gray-700 text-sm">Screenshot of Services Section</p>
           </div>
           <div className="flex flex-col items-center text-center md:col-span-1">
-            <img src="https://placehold.co/600x400/D0D0D0/000000?text=FIL+Screenshot+2" alt="Fall In Love Learning Screenshot 2" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
+            <img src="/images/portfolio/fil-learning-resources.jpeg" alt="Fall In Love Learning Screenshot 2" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
             <p className="text-gray-700 text-sm">Screenshot of Resources Page</p>
           </div>
         </div>
