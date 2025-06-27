@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-800 p-4">
       <main className="max-w-4xl text-center p-8 bg-white rounded-xl shadow-2xl space-y-8 animate-fade-in">
         <Image
-          src="https://placehold.co/150x150/E0E0E0/000000?text=Your+Photo" // Replace with your image path
+          src="/images/about/hector-1.JPG" // Replace with your image path
           alt="Hector A. Rodriguez"
           width={150}
           height={150}
