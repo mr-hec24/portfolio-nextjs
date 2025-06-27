@@ -15,7 +15,7 @@ const FallInLoveLearningProjectPage: React.FC = () => {
 
       {/* Hero Image Placeholder */}
       <img
-        src="https://placehold.co/1200x600/E0E0E0/000000?text=Fall+In+Love+Learning+Website+Hero"
+        src="/images/portfolio/fil-learning-hero.png"
         alt="Fall In Love Learning Website Hero Screenshot"
         className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
         style={{ maxHeight: '600px' }}
