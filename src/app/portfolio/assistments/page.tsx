@@ -54,8 +54,8 @@ const AssistmentsProjectPage: React.FC = () => {
                     My Role & Contributions
                 </h2>
                 <p className="text-lg text-indigo-900 leading-relaxed">
-                    My primary role in this project involved the **development, training,
-                    and comparative analysis of machine learning models** to predict
+                    My primary role in this project involved the <strong>development, training,
+                    and comparative analysis of machine learning models</strong> to predict
                     student skill mastery. My specific contributions included:
                 </p>
                 <ul className="list-disc list-inside ml-6 text-lg text-indigo-900 space-y-2 mt-4">
