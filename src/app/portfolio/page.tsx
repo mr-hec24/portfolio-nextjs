@@ -6,7 +6,7 @@ import React from "react"; // React import is good practice even for simple stat
 export default function PortfolioPage() {
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
+            <h1 className="text-4xl font-bold text-center mb-10 text-gray-200">
                 My Projects
             </h1>
 

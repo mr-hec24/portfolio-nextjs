@@ -1,8 +1,8 @@
 // src/app/about/page.tsx
 
-import React from 'react';
-import Image from 'next/image'; // Use Next.js Image component for optimization
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image"; // Use Next.js Image component for optimization
+import Link from "next/link";
 
 const AboutPage: React.FC = () => {
   return (
@@ -13,7 +13,9 @@ const AboutPage: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gray-900 mb-2 leading-tight">
           About Hector A. Rodriguez
         </h1>
-        <p className="text-xl text-indigo-700 font-medium">AI in Education Specialist</p>
+        <p className="text-xl text-indigo-700 font-medium">
+          AI in Education Specialist
+        </p>
       </header>
 
       <section className="mb-12 p-8 bg-white rounded-xl shadow-lg flex flex-col items-center">
@@ -30,7 +32,10 @@ const AboutPage: React.FC = () => {
           Empowering Education Through Human-First Technology
         </h2>
         <p className="text-lg text-gray-700 mb-4 leading-relaxed text-center">
-          As an AI in Education Specialist, I develop human-first web, app, data, and AI solutions, grounded in cutting-edge research. My mission is to empower schools and educators in cultivating deeper student-teacher relationships and enhancing learning outcomes.
+          As an AI in Education Specialist, I develop human-first web, app,
+          data, and AI solutions, grounded in cutting-edge research. My mission
+          is to empower schools and educators in cultivating deeper
+          student-teacher relationships and enhancing learning outcomes.
         </p>
       </section>
 
@@ -39,10 +44,23 @@ const AboutPage: React.FC = () => {
           My Journey & Vision
         </h2>
         <p className="text-lg text-indigo-900 mb-4 leading-relaxed">
-          My journey into technology is deeply rooted in my experience as an educator. I&apos;ve seen firsthand the challenges and opportunities at the intersection of teaching and technology. This unique perspective drives my approach: to build solutions that are not just innovative, but also practical, intuitive, and truly serve the needs of teachers and students. My passion lies in leveraging data and artificial intelligence to streamline administrative tasks for educators, providing them with valuable insights that free up their time to focus on what matters most – building meaningful relationships with their students.
+          My journey into technology is deeply rooted in my experience as an
+          educator. I&apos;ve seen firsthand the challenges and opportunities at
+          the intersection of teaching and technology. This unique perspective
+          drives my approach: to build solutions that are not just innovative,
+          but also practical, intuitive, and truly serve the needs of teachers
+          and students. My passion lies in leveraging data and artificial
+          intelligence to streamline administrative tasks for educators,
+          providing them with valuable insights that free up their time to focus
+          on what matters most – building meaningful relationships with their
+          students.
         </p>
         <p className="text-lg text-indigo-900 leading-relaxed">
-          I believe that technology should be a powerful assistant, not a replacement, in the learning environment. My goal is to bridge the gap between academic research and real-world classroom application, creating tools that make a tangible difference in learning experiences.
+          I believe that technology should be a powerful assistant, not a
+          replacement, in the learning environment. My goal is to bridge the gap
+          between academic research and real-world classroom application,
+          creating tools that make a tangible difference in learning
+          experiences.
         </p>
       </section>
 
@@ -51,17 +69,36 @@ const AboutPage: React.FC = () => {
           My Expertise
         </h2>
         <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          I specialize in creating custom EdTech solutions by combining my knowledge in:
+          I specialize in creating custom EdTech solutions by combining my
+          knowledge in:
         </p>
         <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
-          <li>**AI & Machine Learning:** Developing intelligent systems for data analysis and personalized learning.</li>
-          <li>**Web Development:** Crafting robust and intuitive web applications (frontend & backend).</li>
-          <li>**Mobile App Development:** Building engaging and functional mobile experiences.</li>
-          <li>**Data Analytics:** Translating complex educational data into actionable insights.</li>
-          <li>**Educational Research & Pedagogy:** Grounding solutions in effective learning theories.</li>
+          <li>
+            <strong>AI & Machine Learning:</strong> Developing intelligent systems for data
+            analysis and personalized learning.
+          </li>
+          <li>
+            <strong>Web Development:</strong> Crafting robust and intuitive web applications
+            (frontend & backend).
+          </li>
+          <li>
+            <strong>Mobile App Development:</strong> Building engaging and functional mobile
+            experiences.
+          </li>
+          <li>
+            <strong>Data Analytics:</strong> Translating complex educational data into
+            actionable insights.
+          </li>
+          <li>
+            <strong>Educational Research & Pedagogy:</strong> Grounding solutions in
+            effective learning theories.
+          </li>
         </ul>
         <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-          My approach ensures that the tools I create are not only technologically advanced but also seamlessly integrate into diverse educational settings, empowering teachers and enriching student learning.
+          My approach ensures that the tools I create are not only
+          technologically advanced but also seamlessly integrate into diverse
+          educational settings, empowering teachers and enriching student
+          learning.
         </p>
       </section>
 
@@ -70,7 +107,10 @@ const AboutPage: React.FC = () => {
           Let&apos;s Connect!
         </h2>
         <p className="text-lg text-indigo-900 mb-6 leading-relaxed">
-          I&apos;m passionate about building impactful EdTech solutions. Explore my projects to see how I translate vision into functional applications, or connect with me to discuss how I can help your organization.
+          I&apos;m passionate about building impactful EdTech solutions. Explore
+          my projects to see how I translate vision into functional
+          applications, or connect with me to discuss how I can help your
+          organization.
         </p>
         <Link
           href="/portfolio"
