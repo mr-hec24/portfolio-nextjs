@@ -45,8 +45,8 @@ const PhoenixSoteriaProjectPage: React.FC = () => {
         </h2>
         <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
           <li>React Native</li>
-          <li>Python (for AI backend, e.g., Flask/FastAPI - *specify your choice*)</li>
-          <li>MongoDB/Firebase (for data storage - *specify your choice*)</li>
+          <li>Python</li>
+          <li>Supabase</li>
           <li>HealthKit/Google Fit APIs (for fitness data integration - *specify if applicable*)</li>
         </ul>
       </section>
