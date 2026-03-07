@@ -9,7 +9,7 @@
   "technologiesUsed": [
     "React Native",
     "Python (for AI backend, e.g., Flask/FastAPI)",
-    "MongoDB/Firebase (for data storage - *specify your choice*)",
+    "Supabase",
     "HealthKit/Google Fit APIs (for fitness data integration - *specify if applicable*)"
   ],
   "solutionApproachDescription": "My approach focuses on creating an intuitive and engaging user experience for daily fitness tracking while leveraging AI for personalized recommendations and trend insights. The app prioritizes seamless data synchronization between devices and the backend. The interface is designed to be clear, visually appealing, and motivate user adherence. Ethical considerations around user data privacy and the secure handling of sensitive health information are paramount in the development process.",
