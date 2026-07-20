@@ -92,6 +92,27 @@ export default function PortfolioPage() {
                         </div>
                     </Link>
                 </div>
+
+                {/* Waypoint Project Card */}
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                    <Link href="/portfolio/waypoint" className="block">
+                        <img src="/images/portfolio/waypoint-hero.png" alt="Waypoint project hero" />
+                        <div className="p-6">
+                            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                                Waypoint — The Roadtrip Method, Turned Into a Tool
+                            </h2>
+                            <p className="text-gray-700 text-base mb-4">
+                                A language-learning web app that operationalizes the immersion-based
+                                &quot;Roadtrip Method&quot; into structured Input / Output / Maintenance
+                                sessions, with an AI-assisted speaking-and-writing loop that turns your
+                                own mistakes into spaced-repetition flashcards.
+                            </p>
+                            <span className="inline-block mt-2 text-indigo-600 hover:text-indigo-800 font-medium border-b-2 border-indigo-600 pb-1">
+                                Learn More &rarr;
+                            </span>
+                        </div>
+                    </Link>
+                </div>
             </div>
         </div>
     );
