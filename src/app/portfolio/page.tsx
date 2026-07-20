@@ -72,13 +72,13 @@ export default function PortfolioPage() {
                     </Link>
                 </div>
 
-                {/* Interleave Project Card */}
+                {/* Interleaf Project Card */}
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                    <Link href="/portfolio/interleave" className="block">
-                        <img src="/images/portfolio/interleave-hero.png" alt="Interleave project hero" />
+                    <Link href="/portfolio/interleaf" className="block">
+                        <img src="/images/portfolio/interleaf-hero.png" alt="Interleaf project hero" />
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                                Interleave, by Hec Labs — Cross-Domain Practice Scheduler
+                                Interleaf, by Hec Labs — Cross-Domain Practice Scheduler
                             </h2>
                             <p className="text-gray-700 text-base mb-4">
                                 A practice scheduler for people learning several unrelated skills at once.

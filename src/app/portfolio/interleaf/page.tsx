@@ -1,14 +1,14 @@
-// src/app/portfolio/interleave/page.tsx
+// src/app/portfolio/interleaf/page.tsx
 
 import React from "react";
 import Link from "next/link";
 
-const InterleaveProjectPage: React.FC = () => {
+const InterleafProjectPage: React.FC = () => {
     return (
         <div className="container mx-auto px-4 py-8 max-w-5xl">
             <header className="text-center mb-10 p-6 bg-white rounded-lg shadow-lg">
                 <h1 className="text-5xl font-extrabold text-gray-900 mb-2 leading-tight">
-                    Interleave, by Hec Labs
+                    Interleaf, by Hec Labs
                 </h1>
                 <p className="text-xl text-indigo-700 font-medium">
                     Cross-Domain Practice Scheduler · AI & Learning Science
@@ -17,8 +17,8 @@ const InterleaveProjectPage: React.FC = () => {
 
             {/* Hero Image */}
             <img
-                src="/images/portfolio/interleave-hero.png"
-                alt="Interleave — the practice conductor for multi-skill learners"
+                src="/images/portfolio/interleaf-hero.png"
+                alt="Interleaf — the practice conductor for multi-skill learners"
                 className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
                 style={{ maxHeight: "600px" }}
             />
@@ -28,7 +28,7 @@ const InterleaveProjectPage: React.FC = () => {
                     Overview & The Problem
                 </h2>
                 <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                    Interleave is a cross-domain practice scheduler for people learning
+                    Interleaf is a cross-domain practice scheduler for people learning
                     several unrelated skills at once — for example, music, a language, and
                     programming. It answers a question no existing tool does: not{" "}
                     <em>when</em> should I review this card, but <em>which</em> skill
@@ -36,7 +36,7 @@ const InterleaveProjectPage: React.FC = () => {
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                     The positioning: the practice conductor for multi-skill learners. Anki
-                    and FSRS tell you when a card is due; Interleave decides which skill to
+                    and FSRS tell you when a card is due; Interleaf decides which skill to
                     practice next, and for how long. The self-regulated-learning research is
                     blunt about why this matters — learners left to their own devices prefer
                     blocked practice, trust fluency illusions, and mis-schedule the very
@@ -108,7 +108,7 @@ const InterleaveProjectPage: React.FC = () => {
                     Solution & Approach: The Utility Loop
                 </h2>
                 <p className="text-lg text-indigo-900 mb-4 leading-relaxed">
-                    Every tick, Interleave scores each skill with a single utility function
+                    Every tick, Interleaf scores each skill with a single utility function
                     combining four forces: <strong>urgency</strong> (is this skill in the
                     effortful-but-recoverable &quot;desirable difficulty&quot; band?),{" "}
                     <strong>fatigue</strong> (how loaded are the cognitive channels this
@@ -122,7 +122,7 @@ const InterleaveProjectPage: React.FC = () => {
                     following a symmetric bell curve: an overdue skill stays at maximum
                     urgency instead of being deprioritized forever — avoiding a death spiral
                     for exactly the skills that most need rescue. And switching uses
-                    hysteresis: Interleave only leaves the current skill when a rival&apos;s
+                    hysteresis: Interleaf only leaves the current skill when a rival&apos;s
                     utility beats it by a margin, so the schedule doesn&apos;t thrash at
                     every crossover and session length becomes emergent — controlled by one
                     interpretable knob rather than a fixed timer.
@@ -141,10 +141,10 @@ const InterleaveProjectPage: React.FC = () => {
                     Scientific Honesty (a brand pillar)
                 </h2>
                 <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                    Interleave is careful about what it claims. The classic interleaving
+                    Interleaf is careful about what it claims. The classic interleaving
                     effect — the one that makes shuffled practice beat blocked practice —
                     depends on similar, confusable categories and does not transfer to
-                    unrelated domains (Brunmair &amp; Richter, 2019). So Interleave never
+                    unrelated domains (Brunmair &amp; Richter, 2019). So Interleaf never
                     claims that effect for cross-domain switching.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -165,7 +165,7 @@ const InterleaveProjectPage: React.FC = () => {
                     Roadmap & Intended Impact
                 </h2>
                 <p className="text-lg text-indigo-900 mb-6 leading-relaxed">
-                    Interleave is in early development (v1), so the following are framed as{" "}
+                    Interleaf is in early development (v1), so the following are framed as{" "}
                     <strong>intended</strong> outcomes rather than achieved results:
                 </p>
 
@@ -256,8 +256,8 @@ const InterleaveProjectPage: React.FC = () => {
                     </div>
                     <div className="flex flex-col items-center text-center md:col-span-2">
                         <img
-                            src="/images/portfolio/interleave-model-roadmap.png"
-                            alt="Interleave model architecture roadmap, v1 through v3"
+                            src="/images/portfolio/interleaf-model-roadmap.png"
+                            alt="Interleaf model architecture roadmap, v1 through v3"
                             className="w-full h-48 object-cover rounded-lg shadow-md mb-3"
                         />
                         <p className="text-gray-700 text-sm">
@@ -271,4 +271,4 @@ const InterleaveProjectPage: React.FC = () => {
     );
 };
 
-export default InterleaveProjectPage;
+export default InterleafProjectPage;
