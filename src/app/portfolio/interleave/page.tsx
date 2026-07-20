@@ -95,8 +95,10 @@ const InterleaveProjectPage: React.FC = () => {
                         stability updates; closed-form leaky-integrator fatigue model
                     </li>
                     <li>
-                        <strong>Planned (data-gated):</strong> Half-Life Regression (v2);
-                        inductive two-relation R-GCN (v3)
+                        <strong>Planned ML (data-gated, Python):</strong> the learned
+                        models would live in a separate Python service — Half-Life
+                        Regression (v2) and an inductive two-relation R-GCN (v3) — while the
+                        TypeScript/Node.js scheduler and Supabase logging spine stay the core
                     </li>
                 </ul>
             </section>

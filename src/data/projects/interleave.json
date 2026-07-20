@@ -13,8 +13,8 @@
     "LLM-based content extraction (skill graph + prerequisite DAG)",
     "FSRS-style spaced-repetition scheduling",
     "Closed-form control (leaky-integrator fatigue model)",
-    "Planned v2: Half-Life Regression",
-    "Planned v3: inductive R-GCN (two-relation graph neural network)"
+    "Planned ML in Python (separate service): Half-Life Regression (v2)",
+    "Planned ML in Python (separate service): inductive R-GCN, two-relation graph neural network (v3)"
   ],
   "solutionApproachDescription": "Interleave scores every skill each tick with U_i = 1[reachable] * (alpha*Urgency - beta*Fatigue + gamma*Readiness - lambda*Interference), and switches skills only when a rival beats the current one by a hysteresis margin delta — so session length is emergent, not a fixed timer. Urgency uses a SATURATING desirable-difficulty curve (flat at maximum for overdue skills, avoiding the death spiral a symmetric Gaussian would cause). Fatigue is modeled across four processing channels (logical, verbal, visual, fine-motor) as a leaky integrator. v1 ships fully closed-form with zero trained parameters and perfect cold-start; its real obligation is the append-only logging spine that becomes the training set for a learned decay model (v2) and, eventually, a graph neural network that models cross-skill transfer (v3).",
   "impactSummary": {
