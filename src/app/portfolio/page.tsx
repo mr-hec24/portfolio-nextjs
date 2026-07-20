@@ -71,6 +71,27 @@ export default function PortfolioPage() {
                         </div>
                     </Link>
                 </div>
+
+                {/* Interleave Project Card */}
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                    <Link href="/portfolio/interleave" className="block">
+                        <img src="/images/portfolio/interleave-hero.png" alt="Interleave project hero" />
+                        <div className="p-6">
+                            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                                Interleave, by Hec Labs — Cross-Domain Practice Scheduler
+                            </h2>
+                            <p className="text-gray-700 text-base mb-4">
+                                A practice scheduler for people learning several unrelated skills at once.
+                                It decides which skill to practice next, and for how long, using a utility
+                                model over memory decay, desirable-difficulty urgency, cognitive fatigue,
+                                and prerequisite readiness.
+                            </p>
+                            <span className="inline-block mt-2 text-indigo-600 hover:text-indigo-800 font-medium border-b-2 border-indigo-600 pb-1">
+                                Learn More &rarr;
+                            </span>
+                        </div>
+                    </Link>
+                </div>
             </div>
         </div>
     );
