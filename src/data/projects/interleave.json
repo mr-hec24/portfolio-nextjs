@@ -6,7 +6,9 @@
   "problemStatement": "People learning several unrelated skills at once (e.g., music + a language + programming) have no tool that optimizes across domains. Anki and FSRS tell you when to review a card; none of them decide which skill to work on next, or for how long. The self-regulated-learning literature shows learners systematically mis-schedule themselves — preferring blocked practice and trusting fluency illusions — so the scheduling decision itself is the unmet need.",
   "myRole": "Solo founder. Designed the utility-maximization model and switching policy, specified the closed-form v1 and the v2/v3 learned-model roadmap, and grounded every mechanism claim in a structured reading of the memory, interleaving, and knowledge-tracing literature.",
   "technologiesUsed": [
-    "Python",
+    "TypeScript",
+    "Node.js",
+    "Supabase (Postgres backend + append-only logging spine)",
     "Text-embedding models (semantic-similarity graph edges)",
     "LLM-based content extraction (skill graph + prerequisite DAG)",
     "FSRS-style spaced-repetition scheduling",

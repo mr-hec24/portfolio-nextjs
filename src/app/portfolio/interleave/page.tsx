@@ -79,7 +79,11 @@ const InterleaveProjectPage: React.FC = () => {
                 </h2>
                 <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
                     <li>
-                        <strong>Language:</strong> Python
+                        <strong>Language & runtime:</strong> TypeScript on Node.js
+                    </li>
+                    <li>
+                        <strong>Backend:</strong> Supabase (Postgres for the append-only
+                        logging spine, plus auth)
                     </li>
                     <li>
                         <strong>Semantic graph:</strong> text-embedding models for
@@ -95,11 +99,6 @@ const InterleaveProjectPage: React.FC = () => {
                         inductive two-relation R-GCN (v3)
                     </li>
                 </ul>
-                <p className="text-base text-gray-500 italic mt-4">
-                    Founder note: confirm this matches the actual v1 implementation
-                    language/stack in the interleave repo before publishing, and adjust if
-                    needed.
-                </p>
             </section>
 
             <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
