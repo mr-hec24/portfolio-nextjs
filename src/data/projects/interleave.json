@@ -1,0 +1,62 @@
+{
+  "slug": "interleave",
+  "title": "Interleave, by Hec Labs — Cross-Domain Practice Scheduler",
+  "category": "AI & Learning Science",
+  "shortDescription": "A cross-domain practice scheduler that tells multi-skill learners which skill to practice next, and for how long, by scoring every skill with a utility function over memory decay, desirable-difficulty urgency, cognitive fatigue, and prerequisite readiness.",
+  "problemStatement": "People learning several unrelated skills at once (e.g., music + a language + programming) have no tool that optimizes across domains. Anki and FSRS tell you when to review a card; none of them decide which skill to work on next, or for how long. The self-regulated-learning literature shows learners systematically mis-schedule themselves — preferring blocked practice and trusting fluency illusions — so the scheduling decision itself is the unmet need.",
+  "myRole": "Solo founder. Designed the utility-maximization model and switching policy, specified the closed-form v1 and the v2/v3 learned-model roadmap, and grounded every mechanism claim in a structured reading of the memory, interleaving, and knowledge-tracing literature.",
+  "technologiesUsed": [
+    "Python",
+    "Text-embedding models (semantic-similarity graph edges)",
+    "LLM-based content extraction (skill graph + prerequisite DAG)",
+    "FSRS-style spaced-repetition scheduling",
+    "Closed-form control (leaky-integrator fatigue model)",
+    "Planned v2: Half-Life Regression",
+    "Planned v3: inductive R-GCN (two-relation graph neural network)"
+  ],
+  "solutionApproachDescription": "Interleave scores every skill each tick with U_i = 1[reachable] * (alpha*Urgency - beta*Fatigue + gamma*Readiness - lambda*Interference), and switches skills only when a rival beats the current one by a hysteresis margin delta — so session length is emergent, not a fixed timer. Urgency uses a SATURATING desirable-difficulty curve (flat at maximum for overdue skills, avoiding the death spiral a symmetric Gaussian would cause). Fatigue is modeled across four processing channels (logical, verbal, visual, fine-motor) as a leaky integrator. v1 ships fully closed-form with zero trained parameters and perfect cold-start; its real obligation is the append-only logging spine that becomes the training set for a learned decay model (v2) and, eventually, a graph neural network that models cross-skill transfer (v3).",
+  "impactSummary": {
+    "overall": "Interleave is in early development (v1). Its intended contribution is to make the cross-domain scheduling decision — which unrelated skill to practice next, and for how long — that no existing spaced-repetition or study tool addresses, while holding a high bar for scientific honesty about which mechanisms are validated versus novel.",
+    "points": [
+      {
+        "stakeholder": "Multi-skill learners",
+        "details": [
+          "A single answer to 'what should I practice next?' across unrelated domains, replacing ad-hoc self-scheduling that the research shows is systematically biased.",
+          "Emergent session structure tuned by one interpretable parameter (the hysteresis margin), rather than rigid fixed-length study blocks."
+        ]
+      },
+      {
+        "stakeholder": "Learning-science practice",
+        "details": [
+          "An honest cross-domain design: the benefit is claimed via forced spacing, contextual-interference-style variability, and channel-level fatigue relief — NOT the classic discrimination-based interleaving effect, which requires confusable categories that unrelated domains lack (Brunmair & Richter, 2019).",
+          "A logging spine built from day one so that novel components (the fatigue model, cross-domain transfer coefficients) can be empirically tested rather than assumed."
+        ]
+      },
+      {
+        "stakeholder": "The platform / roadmap",
+        "details": [
+          "A version sequence gated by data, not preference: closed-form v1, linear Half-Life Regression at ~5-10k logged reviews, and a two-relation inductive GNN only once it beats calibrated HLR on a time-split evaluation.",
+          "Open-core intent: the algorithms and research are meant to be open, with a hosted service funding the infrastructure."
+        ]
+      }
+    ],
+    "specialNotes": "Scientific-honesty disclaimer is a brand pillar: components with no direct empirical validation (the four-channel fatigue model, skill-level decay extrapolation, cross-domain transfer) are explicitly flagged as novel and instrumented for testing, not presented as established results."
+  },
+  "visualsAndDemos": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/1200x600/0F1D33/6FD3E7?text=Interleave+%E2%80%94+The+Practice+Conductor",
+      "alt": "Interleave project hero"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/mr-hec24/interleave",
+      "label": "GitHub Repository"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/142640/F5B841?text=Model+Roadmap+v1+%E2%86%92+v3",
+      "alt": "Interleave model architecture roadmap, v1 through v3"
+    }
+  ]
+}
