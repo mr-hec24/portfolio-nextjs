@@ -1,0 +1,64 @@
+{
+  "slug": "waypoint",
+  "title": "Waypoint — The Roadtrip Method, Turned Into a Tool",
+  "category": "AI & Language Learning",
+  "shortDescription": "A language-learning web app that operationalizes the immersion-based 'Roadtrip Method' into structured Input / Output / Maintenance sessions, with an AI-assisted speaking-and-writing loop that turns your own mistakes into spaced-repetition flashcards.",
+  "problemStatement": "Self-directed language learners are told to immerse, speak, and review — but no single tool sequences those activities into a coherent daily practice. Flashcard apps drill isolated cards with no connection to real output; there is no bridge from 'I tried to say something and got it wrong' to 'that exact gap is now a card I review.' Learners are left to stitch together Anki, a voice recorder, a notebook, and a tutor by hand, and most abandon the loop before it compounds.",
+  "myRole": "Solo designer and full-stack developer. Adapted the Roadtrip Method (an existing immersion pedagogy) into a concrete session model, and built the entire app end to end: the React/TypeScript client, the Supabase data model and auth, the two AI edge functions (transcription and correction/flashcard mining), the SM-2 spaced-repetition engine, and the story-speaking practice loop.",
+  "technologiesUsed": [
+    "TypeScript",
+    "React 19 + Vite",
+    "Tailwind CSS v4",
+    "React Router + TanStack Query (server state) + Zustand (session state)",
+    "Supabase (Postgres, Auth, Storage, Edge Functions)",
+    "OpenAI Whisper (speech-to-text, via a Deno edge function)",
+    "Anthropic Claude (correction + flashcard mining, via a Deno edge function with structured JSON output)",
+    "SM-2 spaced-repetition scheduling",
+    "PWA (installable, offline-aware)"
+  ],
+  "solutionApproachDescription": "Waypoint structures practice around the Roadtrip Method's three pillars — Input, Output, and Maintenance — inside timed session blocks. Its centerpiece is the Story-Speaking cycle: the learner records themselves telling a story from a prompt, Whisper transcribes it, and a three-column review workbench (what you said / what you meant / the right way) has Claude generate corrections and mine the gaps into flashcards. The learner then briefly drills those cards and re-records the same story — repeating the cycle until the vocabulary and narrative stick. Cards flow into an SM-2 review queue, so today's spoken mistake becomes tomorrow's scheduled review. A parallel Writing flow uses the same review-and-mine workbench, and dedicated Speaking and Writing pages let learners search past sessions, rename them, study a single session's mined cards, or start an exercise standalone.",
+  "impactSummary": {
+    "overall": "Waypoint is in active development. Its aim is to close the loop between production and review that self-study normally leaves open — making the learner's own output the source of their spaced-repetition material, inside a session structure that reflects an established immersion method rather than ad-hoc drilling.",
+    "points": [
+      {
+        "stakeholder": "Language learners",
+        "details": [
+          "One tool that sequences immersion, speaking/writing output, and review — instead of manually juggling a flashcard app, a recorder, and a notebook.",
+          "Flashcards sourced from the learner's own mistakes, so review time targets exactly the gaps that surfaced during real production."
+        ]
+      },
+      {
+        "stakeholder": "The method",
+        "details": [
+          "Turns the Roadtrip Method's Input / Output / Maintenance pillars into a concrete, timed session flow a learner can actually follow day to day.",
+          "The Story-Speaking cycle makes 'repeat the same story until it's fluent' a first-class, guided loop rather than a vague instruction."
+        ]
+      },
+      {
+        "stakeholder": "The app / engineering",
+        "details": [
+          "A clean layered architecture (domain entities → repository interfaces → Supabase implementations → React Query hooks) that keeps UI code free of direct database access.",
+          "AI keys never touch the client: transcription and correction run in Supabase edge functions, which also expose availability probes so the UI degrades gracefully when AI is unconfigured."
+        ]
+      }
+    ],
+    "specialNotes": "The pedagogical framework is adapted from the existing 'Roadtrip Method' immersion approach; Waypoint is the software implementation of it, not the method's originator. The app is a personal project under active development, so the impact above is design intent rather than measured outcomes."
+  },
+  "visualsAndDemos": [
+    {
+      "type": "image",
+      "src": "https://placehold.co/1200x600/223022/D9A084?text=Waypoint+%E2%80%94+The+Roadtrip+Method",
+      "alt": "Waypoint project hero"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/mr-hec24/Waypoint",
+      "label": "GitHub Repository"
+    },
+    {
+      "type": "image",
+      "src": "https://placehold.co/600x400/223022/C9D3C6?text=Story-Speaking+Cycle+Loop",
+      "alt": "The Story-Speaking cycle: record, transcribe, correct, mine flashcards, study, retake"
+    }
+  ]
+}
