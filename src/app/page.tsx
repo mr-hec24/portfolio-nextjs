@@ -14,6 +14,7 @@ import {
   SectionRule,
   Tags,
 } from "@/components/ui";
+import { getPosts } from "@/lib/posts";
 
 const DESK = [
   "Building out the Interleave user experience to promote retrieval.",
@@ -47,7 +48,11 @@ const WORKSHOP = [
   },
 ];
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const notes = (await getPosts()).slice(0, 3);
+
   return (
     <>
       {/* ---------------- Hero ---------------- */}
@@ -225,12 +230,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ---------------- Notes ---------------- */}
+      {notes.length > 0 && (
+        <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-11">
+          <SectionRule
+            label="03 / NOTES"
+            action={{ href: "/writing", label: "All writing →" }}
+            className="mb-[30px]"
+          />
+          <div className="grid gap-6 md:grid-cols-3">
+            {notes.map((post, i) => (
+              <Reveal key={post.slug} index={i}>
+                <Link
+                  href={`/writing/${post.slug}`}
+                  className="group block border-t-2 border-ink pt-4"
+                >
+                  <div className="mb-3 font-mono text-[10px] tracking-[0.08em] text-muted">
+                    {post.category.toUpperCase()} · {post.readMinutes} MIN
+                  </div>
+                  <h3 className="mb-2.5 font-display text-[25px] font-normal leading-[1.2] transition-colors group-hover:text-accent">
+                    {post.title}
+                  </h3>
+                  {post.excerpt ? (
+                    <p className="text-sm leading-[1.6] text-ink-2">
+                      {post.excerpt}
+                    </p>
+                  ) : null}
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ---------------- Say hello ---------------- */}
       <section className="bg-accent-deep px-6 py-16 text-[#F7F1E4] md:px-11">
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-end md:gap-[60px]">
           <div>
             <div className="mb-5 font-mono text-[10.5px] tracking-[0.14em] text-[#F0C9A8]">
-              03 / SAY HELLO
+              04 / SAY HELLO
             </div>
             <p className="max-w-[24ch] font-display text-[30px] leading-[1.16] tracking-[-0.01em] md:text-[40px]">
               If you work in schools, research, or you&apos;re building something
