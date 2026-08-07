@@ -1,145 +1,116 @@
-// src/app/portfolio/fall-in-love-learning/page.tsx
+// src/app/portfolio/fil-learning/page.tsx
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import ProjectShell, {
+  Body,
+  Lead,
+  Points,
+  ProjectSection,
+} from "@/components/project/ProjectShell";
 
-const FallInLoveLearningProjectPage: React.FC = () => {
+export default function FallInLoveLearningProjectPage() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <header className="text-center mb-10 p-6 bg-white rounded-lg shadow-lg">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-2 leading-tight">
-          Fall In Love Learning LLC - Tutoring Company Website
-        </h1>
-        <p className="text-xl text-indigo-700 font-medium">Web Development</p>
-      </header>
+    <ProjectShell
+      breadcrumb="FALL IN LOVE LEARNING"
+      badge={{ kind: "client", text: "CLIENT" }}
+      category="WEB DEVELOPMENT"
+      title="Fall In Love Learning"
+      dek="A storefront and a free resource hub for a new tutoring company."
+      tags={["HTML", "CSS", "JavaScript", "Bootstrap"]}
+      actions={[
+        {
+          href: "https://mr-hec24.github.io/FIL_Learning/",
+          label: "Live site ↗",
+        },
+        {
+          href: "https://github.com/mr-hec24/FIL_Learning",
+          label: "GitHub repo ↗",
+          variant: "outline",
+        },
+      ]}
+      hero="/images/portfolio/fil-learning-hero.png"
+      heroAlt="Fall In Love Learning website"
+      previous={{ href: "/portfolio/waypoint", title: "Waypoint" }}
+      next={{ href: "/portfolio/phoenix-soteria", title: "Phoenix Soteria" }}
+    >
+      <ProjectSection label="01 / THE PROBLEM">
+        <Lead>A new tutoring company with nowhere to point people.</Lead>
+        <Body>
+          Fall In Love Learning needed a professional, inviting online presence:
+          somewhere prospective families could learn about the company, see rates
+          and services, and meet the tutors. The site also hosts free resources
+          for students applying to college — value offered up front rather than
+          gated behind an enquiry form.
+        </Body>
+      </ProjectSection>
 
-      {/* Hero Image Placeholder */}
-      <img
-        src="/images/portfolio/fil-learning-hero.png"
-        alt="Fall In Love Learning Website Hero Screenshot"
-        className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
-        style={{ maxHeight: '600px' }}
-      />
+      <ProjectSection label="02 / MY ROLE">
+        <Body>
+          Solely responsible for end-to-end development of the static site,
+          including front-end design and implementation.
+        </Body>
+      </ProjectSection>
 
-      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
-          Project Overview & Problem
-        </h2>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          This landing page allowed an easy place for customers to learn more about the company, see rates, services, and tutors. This webpage also provides free resources for students applying to college. The primary goal was to establish a professional and inviting online presence for a new tutoring venture, making information easily accessible and attracting potential clients.
-        </p>
-      </section>
+      <ProjectSection label="03 / THE APPROACH">
+        <Body>
+          The design philosophy centred on being easy to read and easy to
+          navigate — a site that answers a parent&apos;s questions without making
+          them hunt.
+        </Body>
+        <Points
+          items={[
+            "A colour scheme that's easy on the eyes and reflects the educational brand.",
+            "Content spaced out intentionally to avoid clutter and improve readability.",
+            "Clear navigation across rates, services, tutors, and resources.",
+            "Bootstrap for responsive layout, so the site holds up on desktop, tablet, and mobile.",
+          ]}
+        />
+      </ProjectSection>
 
-      <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          My Role & Contributions
-        </h2>
-        <p className="text-lg text-indigo-900 leading-relaxed">
-          I was solely responsible for the end-to-end development of this static website, including front-end design and implementation.
-        </p>
-      </section>
+      <ProjectSection label="04 / INTENDED IMPACT">
+        <Body>
+          The site established immediate online credibility for the startup and
+          gave it a professional storefront. The targets below were the
+          engagement goals set at launch rather than measured outcomes.
+        </Body>
+        <Points
+          items={[
+            "Serve as the primary touchpoint for new client enquiries and service exploration.",
+            "Drive engagement with the free college-application guides through a dedicated, easily navigable resource section — building community value and perceived expertise.",
+            "Improve accessibility so a wider audience can reach the information.",
+          ]}
+        />
+      </ProjectSection>
 
-      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
-          Technologies Used
-        </h2>
-        <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Bootstrap</li>
-        </ul>
-      </section>
-
-      <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          Solution & Approach
-        </h2>
-        <p className="text-lg text-indigo-900 leading-relaxed">
-          My design philosophy centered on &apos;user-friendliness&apos; and &apos;visual appeal&apos;. I ensured the website was easy to understand and navigate by:
-        </p>
-        <ul className="list-disc list-inside ml-6 text-lg text-indigo-900 space-y-2 mt-4">
-          <li>
-            Developing a &apos;color scheme that is easy on the eyes&apos; and reflects the educational brand.
-          </li>
-          <li>
-            &apos;Spacing out content&apos; intentionally to avoid clutter and improve readability.
-          </li>
-          <li>
-            Providing &apos;clear navigation options&apos; for various sections (rates, services, tutors, resources) to enhance user experience.
-          </li>
-          <li>
-            Leveraging &apos;Bootstrap for responsive design&apos;, ensuring optimal viewing and functionality across various devices (desktop, tablet, mobile).
-          </li>
-        </ul>
-      </section>
-
-      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
-          Impact & Results (Intended)
-        </h2>
-        <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          The website was instrumental in establishing an &apos;immediate online credibility and professional storefront&apos; for the Fall In Love Learning LLC startup.
-        </p>
-
-        <div className="space-y-6">
-          <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">For Website/Platform:</h3>
-            <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
-              <li>
-                &apos;Intended to increase customer acquisition by 20%&apos; by serving as the primary touchpoint for new client inquiries and service exploration.
-              </li>
-              <li>
-                &apos;Intended to increase engagement with educational resources by 30%&apos; by providing a dedicated, easily navigable section for free college application guides and student resources, fostering community value and perceived expertise.
-              </li>
-              <li>
-                &apos;Improved accessibility&apos; was a core design goal, ensuring a wider audience could access the information.
-              </li>
-            </ul>
-          </div>
+      <ProjectSection label="05 / GALLERY" last>
+        <div className="grid max-w-[66ch] gap-5 md:grid-cols-2">
+          <figure>
+            <Image
+              src="/images/portfolio/fil-learning-services.png"
+              alt="Fall In Love Learning services section"
+              width={600}
+              height={230}
+              className="h-[230px] w-full border border-line-2 object-cover"
+            />
+            <figcaption className="mt-3 font-mono text-[10px] tracking-[0.05em] text-muted">
+              services section
+            </figcaption>
+          </figure>
+          <figure>
+            <Image
+              src="/images/portfolio/fil-learning-resources.jpeg"
+              alt="Fall In Love Learning free resources page"
+              width={600}
+              height={230}
+              className="h-[230px] w-full border border-line-2 object-cover"
+            />
+            <figcaption className="mt-3 font-mono text-[10px] tracking-[0.05em] text-muted">
+              free college-application resources
+            </figcaption>
+          </figure>
         </div>
-      </section>
-
-      <section className="p-8 bg-indigo-50 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          Visuals & Demos
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
-          <div className="flex flex-col items-center text-center">
-            <Link
-              href="https://mr-hec24.github.io/FIL_Learning/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium"
-            >
-              View Live Demo &rarr;
-            </Link>
-            <p className="text-gray-700 text-sm mt-2">Interactive, deployed website</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <Link
-              href="https://github.com/mr-hec24/FIL_Learning"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium"
-            >
-              GitHub Repository &rarr;
-            </Link>
-            <p className="text-gray-700 text-sm mt-2">Source code for the landing page</p>
-          </div>
-          {/* Add more image placeholders for specific sections */}
-          <div className="flex flex-col items-center text-center">
-            <img src="/images/portfolio/fil-learning-services.png" alt="Fall In Love Learning Screenshot 1" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
-            <p className="text-gray-700 text-sm">Screenshot of Services Section</p>
-          </div>
-          <div className="flex flex-col items-center text-center md:col-span-1">
-            <img src="/images/portfolio/fil-learning-resources.jpeg" alt="Fall In Love Learning Screenshot 2" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
-            <p className="text-gray-700 text-sm">Screenshot of Resources Page</p>
-          </div>
-        </div>
-      </section>
-    </div>
+      </ProjectSection>
+    </ProjectShell>
   );
-};
-
-export default FallInLoveLearningProjectPage;
+}

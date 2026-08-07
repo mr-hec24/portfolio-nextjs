@@ -1,136 +1,106 @@
 // src/app/portfolio/phoenix-soteria/page.tsx
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import ProjectShell, {
+  Aside,
+  Body,
+  Lead,
+  Points,
+  ProjectSection,
+} from "@/components/project/ProjectShell";
+import { Placeholder } from "@/components/ui";
 
-const PhoenixSoteriaProjectPage: React.FC = () => {
+export default function PhoenixSoteriaProjectPage() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <header className="text-center mb-10 p-6 bg-white rounded-lg shadow-lg">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-2 leading-tight">
-          Phoenix Soteria LLC - AI-Powered Fitness & Wellness Tracker App
-        </h1>
-        <p className="text-xl text-indigo-700 font-medium">Mobile App Development & AI</p>
-      </header>
+    <ProjectShell
+      breadcrumb="PHOENIX SOTERIA"
+      badge={{ kind: "wip", text: "WORK IN PROGRESS" }}
+      category="MOBILE & AI"
+      title="Phoenix Soteria"
+      dek="A fitness and wellness tracker with privacy as a first-order constraint."
+      tags={["React Native", "Python", "Supabase", "HealthKit / Google Fit"]}
+      hero="/images/portfolio/phoenix-soteria-hero.png"
+      heroAlt="Phoenix Soteria app"
+      previous={{
+        href: "/portfolio/fil-learning",
+        title: "Fall In Love Learning",
+      }}
+      next={{ href: "/portfolio/interleave", title: "Interleave" }}
+    >
+      <ProjectSection label="01 / THE PROBLEM">
+        <Lead>
+          Most trackers count steps. Very few say anything useful about how
+          you&apos;re doing.
+        </Lead>
+        <Body>
+          Phoenix Soteria LLC needed a mobile application that goes past basic
+          fitness tracking into personalized, AI-driven insight across physical{" "}
+          <em>and</em> mental well-being — a holistic view rather than a step
+          count. The app is designed to give users actionable data for their own
+          wellness, with a path toward broader well-being initiatives inside
+          educational and organizational contexts.
+        </Body>
+      </ProjectSection>
 
-      {/* Hero Image Placeholder */}
-      <img
-        src="/images/portfolio/phoenix-soteria-hero.png" 
-        alt="Phoenix Soteria App Hero Screenshot"
-        className="w-full rounded-xl shadow-2xl mb-12 aspect-video object-cover"
-        style={{ maxHeight: '600px' }}
-      />
+      <ProjectSection label="02 / MY ROLE">
+        <Body>
+          Leading mobile app development: UI/UX design for intuitive daily use,
+          the AI-driven insight layer, and robust backend data synchronization.
+          Core features are actively under development.
+        </Body>
+      </ProjectSection>
 
-      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
-          Overview & Problem Statement
-        </h2>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          The challenge is to develop a comprehensive mobile application for Phoenix Soteria LLC that goes beyond basic fitness tracking. It aims to offer personalized, AI-driven insights into both physical and mental well-being, fostering a holistic approach to health. The app is designed to provide users with actionable data and support for their wellness journey, potentially connecting to broader well-being initiatives within educational or organizational contexts.
-        </p>
-      </section>
+      <ProjectSection label="03 / THE APPROACH">
+        <Body>
+          The focus is an engaging daily-tracking experience that earns the right
+          to give advice, with AI used for personalized recommendations and trend
+          insight rather than novelty. Data synchronizes seamlessly between
+          devices and the backend, and the interface is built to be clear and
+          motivating enough to sustain adherence.
+        </Body>
+        <Body>
+          Health data is the most sensitive category a consumer app can hold, so
+          privacy and secure handling are treated as design constraints from the
+          start — not a compliance step bolted on at the end.
+        </Body>
+      </ProjectSection>
 
-      <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          My Role & Contributions
-        </h2>
-        <p className="text-lg text-indigo-900 leading-relaxed">
-          My contributions to this project include leading the mobile app development, designing the user interface and user experience (UI/UX) for intuitive interaction, implementing AI-driven insights for personalized tracking, and ensuring robust backend data synchronization. This is a work-in-progress, with core features actively under development.
-        </p>
-      </section>
+      <ProjectSection label="04 / INTENDED IMPACT">
+        <Points
+          items={[
+            <>
+              <strong className="text-ink">For individuals</strong> — deeper
+              engagement with personal health data and proactive management of
+              well-being, with personalized guidance aimed at habits that
+              actually stick.
+            </>,
+            <>
+              <strong className="text-ink">For organizations</strong> — access to
+              aggregated, anonymized wellness trends to inform strategic health
+              initiatives, with potential to integrate into existing educational
+              well-being programs.
+            </>,
+            <>
+              <strong className="text-ink">For the platform</strong> — adoption
+              driven by intuitive design and genuinely personalized features,
+              architected to scale as the user base and feature set grow.
+            </>,
+          ]}
+        />
+        <Aside>
+          Because this is a startup&apos;s core product and still in development,
+          the full codebase isn&apos;t public. I&apos;m happy to walk through the
+          architecture, the technical implementation, and my specific
+          contributions in an interview or a private demo.
+        </Aside>
+      </ProjectSection>
 
-      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
-          Technologies Used
-        </h2>
-        <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
-          <li>React Native</li>
-          <li>Python</li>
-          <li>Supabase</li>
-          <li>HealthKit/Google Fit APIs (for fitness data integration - *specify if applicable*)</li>
-        </ul>
-      </section>
-
-      <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          Solution & Approach
-        </h2>
-        <p className="text-lg text-indigo-900 leading-relaxed">
-          My approach focuses on creating an intuitive and engaging user experience for daily fitness tracking while leveraging AI for personalized recommendations and trend insights. The app prioritizes seamless data synchronization between devices and the backend. The interface is designed to be clear, visually appealing, and motivate user adherence. Ethical considerations around user data privacy and the secure handling of sensitive health information are paramount in the development process.
-        </p>
-      </section>
-
-      <section className="mb-12 p-8 bg-white rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2">
-          Impact & Results (Intended)
-        </h2>
-        <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          This app is intended to transform personal wellness management by providing intelligent, actionable insights that empower users to achieve their fitness and mental well-being goals. It seeks to foster a healthier and more productive environment for individuals and organizations.
-        </p>
-
-        <div className="space-y-6">
-          <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">For Users (Students/Individuals):</h3>
-            <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
-              <li>Increased engagement with personal health data and proactive management of well-being, potentially reducing stress and improving focus.</li>
-              <li>Personalized guidance for fitness and mental health, leading to sustainable healthy habits.</li>
-            </ul>
-          </div>
-
-          <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">For Organizations (e.g., Schools):</h3>
-            <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
-              <li>Access to aggregated (anonymized) wellness trends for strategic health initiatives, potentially leading to improved overall organizational health and productivity metrics.</li>
-              <li>Potential for integration with educational well-being programs to foster a healthier learning and working environment.</li>
-            </ul>
-          </div>
-
-          <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-2">For App/Platform:</h3>
-            <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-1">
-              <li>Aims for high user adoption through intuitive design and highly personalized AI features.</li>
-              <li>Designed for scalability to support a growing user base and future feature expansions.</li>
-            </ul>
-          </div>
+      <ProjectSection label="05 / GALLERY" last>
+        <div className="grid max-w-[66ch] gap-5 md:grid-cols-2">
+          <Placeholder label="dashboard view" className="h-[230px]" />
+          <Placeholder label="personalized insights" className="h-[230px]" />
         </div>
-        <p className="mt-8 p-4 bg-yellow-50 border border-yellow-200 text-yellow-800 rounded-lg text-md italic leading-relaxed">
-          <span className="font-semibold">Note:</span> Due to the proprietary nature of this startup&apos;s core product and ongoing development, the full codebase for the Phoenix Soteria app is not publicly accessible. However, I would be pleased to discuss its architecture, specific technical implementations, and my code contributions in detail during an interview or a private demonstration.
-        </p>
-      </section>
-
-      <section className="p-8 bg-indigo-50 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          Visuals & Demos
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
-          {/* Replace with actual image paths/URLs for screenshots */}
-          <div className="flex flex-col items-center text-center">
-            <img src="https://placehold.co/600x400/C0C0C0/000000?text=App+Screenshot+1" alt="Phoenix Soteria App Screenshot 1" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
-            <p className="text-gray-700 text-sm">App Dashboard View</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <img src="https://placehold.co/600x400/D0D0D0/000000?text=App+Screenshot+2" alt="Phoenix Soteria App Screenshot 2" className="w-full h-48 object-cover rounded-lg shadow-md mb-3" />
-            <p className="text-gray-700 text-sm">Personalized Insights Screen</p>
-          </div>
-          {/* Placeholder for video demo link/embed */}
-          <div className="flex flex-col items-center text-center">
-            <div className="w-full aspect-video rounded-lg shadow-md overflow-hidden bg-gray-300 flex items-center justify-center">
-              {/* If you have a YouTube/Vimeo embed code, put it here */}
-              <span className="text-gray-600 text-sm">Video Demo Placeholder</span>
-            </div>
-            <p className="text-gray-700 text-sm mt-2">Short Video Demo (Work-in-Progress)</p>
-          </div>
-          {/* Optional: link to a public repo for non-proprietary code snippets */}
-          <div className="flex flex-col items-center text-center">
-            <Link href="[Link to your public GitHub repo for illustrative code snippets, if any]" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs px-4 py-2 bg-indigo-600 text-white rounded-md shadow-md hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center text-center text-sm font-medium">
-              Illustrative Code (GitHub) &rarr;
-            </Link>
-            <p className="text-gray-700 text-sm mt-2">Non-sensitive code examples</p>
-          </div>
-        </div>
-      </section>
-    </div>
+      </ProjectSection>
+    </ProjectShell>
   );
-};
-
-export default PhoenixSoteriaProjectPage;
+}
