@@ -25,7 +25,12 @@ export default function HomePage() {
         </p>
 
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-          Empowering schools and educators in cultivating deeper student-teacher relationships and enhancing learning outcomes by developing human-first web, app, data, and AI solutions, grounded in cutting-edge research.
+          I build human-first learning tools — web apps, mobile apps, data
+          pipelines, and AI models — grounded in learning science rather than
+          hype. My path runs through tutoring, peer mentoring, and a lot of
+          stubborn self-teaching, so I build for the person on the other side of
+          the screen: the learner who&apos;s stuck, and the educator who
+          doesn&apos;t have another ten hours a week.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">

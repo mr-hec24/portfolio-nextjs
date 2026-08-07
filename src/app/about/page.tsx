@@ -29,38 +29,50 @@ const AboutPage: React.FC = () => {
         />
 
         <h2 className="text-3xl font-bold text-gray-800 mb-5 border-b-2 border-indigo-200 pb-2 text-center">
-          Empowering Education Through Human-First Technology
+          Human-First Technology, Grounded in Learning Science
         </h2>
         <p className="text-lg text-gray-700 mb-4 leading-relaxed text-center">
-          As an AI in Education Specialist, I develop human-first web, app,
-          data, and AI solutions, grounded in cutting-edge research. My mission
-          is to empower schools and educators in cultivating deeper
-          student-teacher relationships and enhancing learning outcomes.
+          I build the software layer between learning science and the people
+          it&apos;s meant to help: predictive models that flag which student
+          could use a nudge, web and mobile apps that make practice actually
+          happen, and data work that turns a firehose of interaction logs into
+          something an educator can act on in five minutes.
         </p>
       </section>
 
       <section className="mb-12 p-8 bg-indigo-50 rounded-xl shadow-lg">
         <h2 className="text-3xl font-bold text-indigo-800 mb-5 border-b-2 border-indigo-300 pb-2">
-          My Journey & Vision
+          How I Got Here
         </h2>
         <p className="text-lg text-indigo-900 mb-4 leading-relaxed">
-          My journey into technology is deeply rooted in my experience as an
-          educator. I&apos;ve seen firsthand the challenges and opportunities at
-          the intersection of teaching and technology. This unique perspective
-          drives my approach: to build solutions that are not just innovative,
-          but also practical, intuitive, and truly serve the needs of teachers
-          and students. My passion lies in leveraging data and artificial
-          intelligence to streamline administrative tasks for educators,
-          providing them with valuable insights that free up their time to focus
-          on what matters most – building meaningful relationships with their
-          students.
+          My route into EdTech didn&apos;t run through a classroom of my own —
+          it ran through one-on-one tables. I&apos;ve worked as a tutor, sitting
+          with students through the problem they couldn&apos;t crack, and as a
+          peer mentor for people a step behind me on the same path. I&apos;m
+          also a relentless learner in my own right: most of what I do
+          professionally, I taught myself, which means I&apos;ve been the
+          confused person in the chair often enough to remember exactly what it
+          feels like.
+        </p>
+        <p className="text-lg text-indigo-900 mb-4 leading-relaxed">
+          That&apos;s a narrower vantage point than a teacher&apos;s, and I
+          think it&apos;s a useful one. Tutoring shows you what aggregate data
+          hides: a wrong answer is almost never one thing. It&apos;s a missing
+          prerequisite, or a misread question, or plain fatigue, or a student
+          who has quietly decided they&apos;re &quot;not a math person.&quot; In
+          a spreadsheet, those look identical. Building tools that can tell them
+          apart — and that hand the judgment back to a human — is the work I
+          care about.
         </p>
         <p className="text-lg text-indigo-900 leading-relaxed">
-          I believe that technology should be a powerful assistant, not a
-          replacement, in the learning environment. My goal is to bridge the gap
-          between academic research and real-world classroom application,
-          creating tools that make a tangible difference in learning
-          experiences.
+          So I believe technology should be an assistant in the learning
+          environment, never a replacement for it. The models I build are a
+          compass, not a verdict: they point an educator toward a student who
+          may need extra support, and they stop there. No surveillance, no
+          ranking, no automated decisions made about a kid. And I try to stay
+          honest about what&apos;s actually established — when I build something
+          novel, I label it as novel and instrument it so it can be tested,
+          rather than dressing it up as settled science.
         </p>
       </section>
 
@@ -74,8 +86,9 @@ const AboutPage: React.FC = () => {
         </p>
         <ul className="list-disc list-inside ml-6 text-lg text-gray-700 space-y-2">
           <li>
-            <strong>AI & Machine Learning:</strong> Developing intelligent systems for data
-            analysis and personalized learning.
+            <strong>AI & Machine Learning:</strong> Student modeling with Bayesian Knowledge
+            Tracing and Performance Factor Analysis, spaced-repetition scheduling, and
+            applied ML for personalized learning.
           </li>
           <li>
             <strong>Web Development:</strong> Crafting robust and intuitive web applications
@@ -90,8 +103,9 @@ const AboutPage: React.FC = () => {
             actionable insights.
           </li>
           <li>
-            <strong>Educational Research & Pedagogy:</strong> Grounding solutions in
-            effective learning theories.
+            <strong>Learning Science:</strong> Reading the memory, interleaving, and
+            knowledge-tracing literature closely, and translating it into product
+            decisions I can defend.
           </li>
         </ul>
         <p className="text-lg text-gray-700 mt-4 leading-relaxed">
