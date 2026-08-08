@@ -76,8 +76,20 @@ export default async function PostPage({
 
         {/* Meta rail beside the prose, matching the project pages' rhythm. */}
         <div className="grid gap-11 border-t border-line pt-12 md:grid-cols-[210px_1fr]">
-          <div className="font-mono text-[10.5px] tracking-[0.12em] text-muted md:sticky md:top-28 md:self-start">
-            {formatLongDate(post.publishedAt)}
+          <div className="md:sticky md:top-28 md:self-start">
+            <div className="font-mono text-[10.5px] tracking-[0.12em] text-muted">
+              {formatLongDate(post.publishedAt)}
+            </div>
+            {post.linkedin ? (
+              <a
+                href={post.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block border-b border-line-3 pb-0.5 font-mono text-[10.5px] tracking-[0.12em] text-accent transition-colors hover:border-accent"
+              >
+                READ ON LINKEDIN ↗
+              </a>
+            ) : null}
           </div>
           <div className="prose-notes max-w-[68ch]">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>

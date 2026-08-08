@@ -5,6 +5,7 @@ category: ethics
 status: published
 published_at: 2026-06-14
 excerpt: "When a wrong prediction stops being a statistics problem and starts being a student's year."
+linkedin: "https://www.linkedin.com/pulse/all-models-wrong-some-wreck-lives-hector-rodriguez-gi6ac/"
 ---
 
 > **Placeholder body.** The title, category and slug are real — replace

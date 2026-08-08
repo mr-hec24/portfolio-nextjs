@@ -12,6 +12,8 @@ export type Post = {
   category: string;
   readMinutes: number;
   publishedAt: string | null;
+  /** Canonical LinkedIn URL, when the piece was first published there. */
+  linkedin: string | null;
 };
 
 /**
@@ -59,6 +61,7 @@ function readAll(): Post[] {
       publishedAt: data.published_at
         ? new Date(data.published_at).toISOString()
         : null,
+      linkedin: data.linkedin ? String(data.linkedin) : null,
     });
   }
 

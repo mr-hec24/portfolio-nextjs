@@ -39,9 +39,37 @@ are all styled to match the site already.
 | `slug` | no | Defaults to the filename |
 | `read_minutes` | no | Computed at ~200 wpm. Set it only to override |
 | `status` | no | Set to `draft` to keep a file in the repo without publishing it |
+| `linkedin` | no | URL of the LinkedIn original. Renders a "READ ON LINKEDIN ↗" link beside the article |
 
 Ordering is by `published_at`, newest first — the dates are what the index and
 the newer/older links go by, so keep them roughly honest.
+
+---
+
+## Articles first published on LinkedIn
+
+Most of these start life as LinkedIn posts. Add the URL and the article page
+links back to it:
+
+```yaml
+linkedin: "https://www.linkedin.com/pulse/your-article-slug/"
+```
+
+Strip the `?trackingId=...` query string first — it's a per-session token, not
+part of the permalink, and it doesn't belong in the repo.
+
+**Pasting from LinkedIn.** LinkedIn's editor doesn't export markdown, so
+copy-paste needs a little cleanup: its headings arrive as plain bold lines
+(make them `##`), and it tends to leave double blank lines and non-breaking
+spaces between paragraphs. Everything else — bold, italics, links, lists —
+converts cleanly.
+
+**On SEO.** These pages deliberately do *not* set a `rel="canonical"` pointing
+at LinkedIn. Doing so would tell search engines LinkedIn is the authoritative
+copy and your own site shouldn't rank for it, which defeats the point of
+hosting them here. The visible link credits the original instead. If you'd
+rather consolidate ranking onto LinkedIn, add `alternates: { canonical: post.linkedin }`
+to `generateMetadata` in `src/app/writing/[slug]/page.tsx`.
 
 ---
 
