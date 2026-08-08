@@ -8,8 +8,8 @@ export default function SiteFooter() {
       <div className="mx-auto grid max-w-[1280px] gap-10 px-6 pb-[34px] pt-10 md:grid-cols-[1.5fr_1fr] md:items-end md:px-11">
         <div>
           <PullQuote>
-            &ldquo;Technology built for the humans, rather than humans growing
-            for the technology.&rdquo;
+            &ldquo;Every design decision starts with a learner, not a
+            feature.&rdquo;
           </PullQuote>
           <p className="mt-[22px] font-mono text-[10px] tracking-[0.08em] text-muted">
             &copy; {new Date().getFullYear()} HECTOR A. RODRIGUEZ
