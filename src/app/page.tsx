@@ -56,7 +56,15 @@ export default async function HomePage() {
   return (
     <>
       {/* ---------------- Hero ---------------- */}
-      <section className="grid lg:grid-cols-[1fr_430px]">
+      {/*
+        The design was drawn at a fixed 1280 (850 text + 430 photo). Pinning the
+        photo to 430px instead let the empty band between the text and the photo
+        grow with the viewport — 262px at 1280 but ~900px at 1920 — because the
+        copy is capped at 15ch/48ch and stops widening. Capping the text column
+        instead reproduces the design exactly at 1280 and holds that gap
+        constant at every width, with the photo taking the remainder.
+      */}
+      <section className="mx-auto grid max-w-[1280px] lg:grid-cols-[minmax(0,850px)_1fr]">
         <div className="px-6 pb-14 pt-16 md:px-11 md:pt-[76px]">
           <h1 className="mb-[26px] max-w-[15ch] font-display text-[44px] font-normal leading-[1.06] tracking-[-0.015em] text-pretty md:text-[64px]">
             A human-first AI developer working in education.
@@ -111,7 +119,7 @@ export default async function HomePage() {
             alt="Hector A. Rodriguez"
             fill
             priority
-            sizes="(max-width: 1024px) 100vw, 430px"
+            sizes="(max-width: 1024px) 100vw, min(430px, 34vw)"
             className="object-cover object-[50%_20%]"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(23,18,15,.78)] to-transparent px-5 py-4 font-mono text-[10.5px] tracking-[0.06em] text-[#F1E7D8]">
@@ -121,7 +129,7 @@ export default async function HomePage() {
       </section>
 
       {/* ---------------- Featured: Interleave ---------------- */}
-      <div className="px-6 pt-[70px] md:px-11">
+      <div className="mx-auto max-w-[1280px] px-6 pt-[70px] md:px-11">
         <Reveal className="grid items-center gap-11 border-b border-line pb-14 lg:grid-cols-[1.02fr_.98fr]">
           <Link href="/portfolio/interleave" className="proj block">
             <div className="proj-media overflow-hidden">
@@ -193,13 +201,14 @@ export default async function HomePage() {
       </div>
 
       {/* ---------------- Also in the workshop ---------------- */}
-      <section className="bg-band px-6 py-14 md:px-11">
-        <SectionRule
-          label="02 / ALSO IN THE WORKSHOP"
-          action={{ href: "/portfolio", label: "See all projects →" }}
-          className="mb-[30px]"
-        />
-        <div className="grid gap-5 md:grid-cols-3">
+      <section className="bg-band">
+        <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-11">
+          <SectionRule
+            label="02 / ALSO IN THE WORKSHOP"
+            action={{ href: "/portfolio", label: "See all projects →" }}
+            className="mb-[30px]"
+          />
+          <div className="grid gap-5 md:grid-cols-3">
           {WORKSHOP.map((item, i) => (
             <Reveal key={item.href} index={i}>
               <Link
@@ -227,6 +236,7 @@ export default async function HomePage() {
               </Link>
             </Reveal>
           ))}
+          </div>
         </div>
       </section>
 
@@ -264,8 +274,8 @@ export default async function HomePage() {
       )}
 
       {/* ---------------- Say hello ---------------- */}
-      <section className="bg-accent-deep px-6 py-16 text-[#F7F1E4] md:px-11">
-        <div className="flex flex-col justify-between gap-10 md:flex-row md:items-end md:gap-[60px]">
+      <section className="bg-accent-deep text-[#F7F1E4]">
+        <div className="mx-auto flex max-w-[1280px] flex-col justify-between gap-10 px-6 py-16 md:flex-row md:items-end md:gap-[60px] md:px-11">
           <div>
             <div className="mb-5 font-mono text-[10.5px] tracking-[0.14em] text-[#F0C9A8]">
               04 / SAY HELLO
