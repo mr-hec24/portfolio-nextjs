@@ -2,13 +2,15 @@
 title: "Hard Reset"
 slug: hard-reset
 category: education
-status: published
-published_at: 2026-05-30
+status: draft
+published_at:
 excerpt: ""
+linkedin: ""
 ---
 
-> **Placeholder body, and the excerpt above is intentionally empty.** The
-> design's sample description for this post was "Leaving the classroom without
-> leaving the work behind," which doesn't match your background — so it was
-> left blank rather than shipped as fact. Add a line of your own, replace this
-> body, then commit.
+Not yet migrated. Paste the LinkedIn article body here, fill in `published_at`,
+`excerpt` and `linkedin` above, then flip `status` to `published`.
+
+It's held as a draft rather than published because its previous date was a
+placeholder invented by the design, which would have sorted this above the real
+articles on the index.

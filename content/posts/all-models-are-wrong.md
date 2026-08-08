@@ -3,21 +3,49 @@ title: "All Models Are Wrong… But Some Wreck Lives"
 slug: all-models-are-wrong
 category: ethics
 status: published
-published_at: 2026-06-14
-excerpt: "When a wrong prediction stops being a statistics problem and starts being a student's year."
+published_at: 2025-08-25
+excerpt: "If data is power, then modeling is responsibility."
 linkedin: "https://www.linkedin.com/pulse/all-models-wrong-some-wreck-lives-hector-rodriguez-gi6ac/"
 ---
 
-> **Placeholder body.** The title, category and slug are real — replace
-> everything below this line with your article, then commit.
+Every time you apply for a job, take out a loan, or walk into a classroom, there's a model judging you. Most of us never see it. And that's the problem. I believe it's safe to say that we are officially in a data driven society. Any company you can possibly think of will benefit from collecting data and performing analysis on it to drive more sales, more encounters, and more interactions. We've slowly seen how data is becoming more and more important: going from polls and surveys to the annoying cookies pop-up on almost every website you visit, data collection and the models that are created from this data seems to be shoved in our faces every day. And now with the rise of the AI, LLMs, and Agentic AI, it seems that more and more people are becoming aware that these data-driven models are kind of running our world. But what happens when these models that we create become harmful? What can we do to protect ourselves from these harms?
 
-Box's aphorism gets quoted in every stats course: all models are wrong, but
-some are useful. It's usually delivered as a shrug — a reminder not to fall in
-love with your own abstractions.
+Throughout my experience developing models using data about people, I have always been wary of the possibility of creating a model that is biased against anyone. I have a vision of developing a new standardized assessment that'll assess students' abilities to think critically, creatively, and with curiosity. I've been hesitant, however, because I know that these types of models can be used for good or bad. Cathy O'Neil, data scientist and author of blog [mathbabe.org](http://mathbabe.org/), offers some advice and guidance when it comes to developing these Big Data algorithms. She shows that models and algorithms based on human data can become extremely harmful for everyone. I never understood the reality of these issues until I read her book. So here are my reflections and thoughts on it.
 
-In education technology the second half needs an addendum. Some models are
-wrong in ways that cost a real person something. A misfit line on a chart is a
-rounding error. A student flagged as "unlikely to master this" who then gets
-routed away from the harder track is a year of their life.
+## Weapons of Math Destruction
 
-## What changes when the residual is a person
+### Recap of the Book
+
+Weapons of Math Destruction is a book written by Cathy O'Neil, warning us about opaque, unregulated algorithms and models that scale harm. She calls these models and algorithms "Weapons of Math Destruction," or WMD's to keep it short. To be clear about what or how a WMD works, WMD's are models or algorithms that are not open to the public. We don't know or understand how they work, and what criteria they are using to make their predictions. Unregulated refers to these models that have no way of receiving feedback or making corrections to their predictions and assumptions. Finally, scaling harm is all about the scale at which these models affect people.
+
+O'Neil explores various different WMD's of different types in different fields throughout the entire book to unpack the seriousness and impact of these WMD's. Here are a couple of WMD's she mentions in the book: teacher evaluation models, US News Ranking models for Colleges and Universities, recidivism prediction tools, resume filters, productivity scoring in the workplace, credit scores & e-scores as proxies in other non-financial models, and voter profiling.
+
+Sometimes the issue was the model itself trying to measure something that is overly complex to model, such as the teacher evaluation models and productivity scoring in the workplace. These models inherently are over-exploiting the data that they have available to them to try and create a prediction algorithm that makes sense. But what sort of data do you need to collect to determine whether a coworker is being more productive than another, or to determine the effectiveness of teachers? Maybe amount of time at desk, number of breaks, amount of time engaging with students, student scores, and more make sense, but when the sample size for these teachers and workers is small, no model can reliably assess each individual. Being able to understand how data works in these models is important before we start using these models to impact the lives of people. These for example, were used to fire teachers and workers, regardless of how ridiculous the scores were.
+
+Other times, the issue was in how the information from the models was being used, such as the recidivism prediction tools, credit scores and e-scores, and the US News Ranking model for colleges and universities. Recidivism prediction tools simply pointed the police forces towards places that have a higher chance of criminals committing a crime again. The issue occurs when these predictions are being used as the only amount of evidence, they need to detain certain people, without due process. Credit scores themselves are not harmful models, if anything, they are everything that a good model show (they are transparent, regulated, and don't cause harm in itself). But when employers start using credit scores as a proxy for "good work ethic", you have a model that is biased to give jobs to the upper class and refuse the middle and lower classes simply because their credit score is low. Finally, the US News Ranking model created a toxic feedback loop of colleges and universities trying to beat the system to score higher on the ranking system (inflating SAT scores, rejecting qualified applicants to seem more selective, investment in superficial prestige such as dorms and sports).
+
+Overall summary of WMD's and their core issues:
+
+- Teacher Evaluation Methods use oversimplified metrics, have opaque scoring, and cause job loss to those who don't deserve it
+- US News Rankings caused a feedback loop with prestige inflation, and caused schools to game the system for more attention
+- Recidivism Tools caused biased policing and decreased due process
+- Resume Filters has reinforcement of bias and purposely excludes qualified candidates for the sake of the algorithm
+- Credits Scores as Proxies cause class discrimination, and the misuse is outside of the intended scope
+
+In the end, the biggest problem of all (in my opinion) is the fact that these models and algorithms had no form of regulation at all. There is no way to tell if the model made a mistake and try to fix the mistake. The opaqueness of these WMD's makes it extremely difficult for anyone who has been wronged by the model to call the model out for making a mistake. To make it worse, the lack of regulations makes it difficult for those who do call out the models to make their case.
+
+## Philosophy Shift
+
+The rise of models and algorithms being placed in pretty much everything that we interact with has convinced us that these algorithms are able to learn and predict the absolute truth. That is not the case though. With all models, you will always have false positives and false negatives. Usually, in data science, when a model has 100% accuracy, it's a BAD sign, indicating that your model has overfit the data, meaning that the model has memorized every possible data point rather than learning the relationships between traits of the data. It's the difference of a student memorizing the answers to a test versus a student who has actually learned the content. It may be possible that they both perform the exact same on the exam, but if you give the student different tests on the same concept, the student who has actually learned the content will perform consistently better than the student who has memorized the content of test A.
+
+Granted, I am talking about the testing and development of these models rather than the execution. However, the society's obsession with always being right is tainting our expectations of these faulty models. To start, it's important to remember that all of these models reflect human data, not some sort of perfect data that we can get elsewhere. Humans are inherently flawed, so doesn't it make sense that our models will also be flawed in some capacity?
+
+Secondly, no matter how much cleaning we put into the models, even if we have a model that works extremely well, humans change over time. A model that worked 5 years ago will not work now. There are many reasons that this occurs: humans start acting differently because of the insights provided by the previous model, models start targeting specific demographics to optimize their results, or simply, humans have adopted a new trend that disrupts the previous models. For this reason alone, it is evident that models should always be evaluated to ensure that they are still up to date with the human tendencies, especially if the model is being used to assess people. So why did we let these WMD's get so out of hand and unchecked?
+
+A key principle in data science is the law of large numbers, which emphasizes that as the number of trials or samples increases, the observed outcome tends to converge closer to the expected value. It is often misunderstood that if a model is doing horribly, all you need is more data. While more data will help the model's output, we forget that it models the EXPECTED value, or in other words, the average or mean. This second part is super important when considering modeling human behavior. Although there will always be an expected value that we can approximate to, we forget about the outliers and the range of the values in the first place. We forget about the distributions that occur within the complexity of human behavior. This can't be mitigated by throwing more data at the model. A common workaround to data that has a huge variance is to break up the data into smaller categories with smaller variance. The issue, however, is that sometimes these smaller categories don't have enough data points to be able to train a proper model. So, you have this balancing act of how much variance can we afford to play with before the model is just ridiculous?
+
+## Conclusion
+
+As I was taking an advanced machine learning class in college, my professor quoted his professor saying, "All models are wrong, but some are useful." This is the mentality and philosophy one must adopt when dealing with data science. All models come with some sort of error, and if not, the model itself is wrong. All human-based models are prone to shift, so constant and quality assessment of such models is necessary. All models require a balance of variance and amount of data to properly model human behavior.
+
+In the end, I do believe that data scientists have a huge responsibility to fight against these WMD's as we are the only ones who actually understand the process behind such models. Data is becoming more valuable, and those who can manipulate it to share stories are the ones who have power over people. If data is power, then modeling is responsibility. Let's wield it with care. I would love to hear your thoughts, especially from fellow data scientists, educators, and technologists: what are you doing to mitigate the development of more WMD's?
