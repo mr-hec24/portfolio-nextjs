@@ -12,12 +12,8 @@ export const metadata: Metadata = {
     "Essays and shorter notes on AI, education, ethics — and the occasional detour.",
 };
 
-// Re-fetch at most once a minute; scripts/publish.mjs also pings
-// /api/revalidate for an instant refresh after publishing.
-export const revalidate = 60;
-
-export default async function WritingPage() {
-  const posts = await getPosts();
+export default function WritingPage() {
+  const posts = getPosts();
 
   return (
     <>

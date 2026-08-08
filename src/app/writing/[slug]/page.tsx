@@ -8,16 +8,15 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { formatLongDate, getPost, getPosts } from "@/lib/posts";
 
-export const revalidate = 60;
-
 /**
- * Pre-render whatever exists at build time. `dynamicParams` stays on (the
- * default) so a post published later is rendered on first request rather than
- * 404ing until the next deploy.
+ * Every article is a markdown file in the repo, so the full set is known at
+ * build time. dynamicParams: false means anything else is a clean 404 rather
+ * than an attempted render.
  */
-export async function generateStaticParams() {
-  const posts = await getPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -26,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = getPost(slug);
   if (!post) return { title: "Not found" };
 
   return {
@@ -41,10 +40,10 @@ export default async function PostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = getPost(slug);
   if (!post) notFound();
 
-  const posts = await getPosts();
+  const posts = getPosts();
   const index = posts.findIndex((p) => p.slug === post.slug);
   const newer = index > 0 ? posts[index - 1] : null;
   const older = index >= 0 && index < posts.length - 1 ? posts[index + 1] : null;

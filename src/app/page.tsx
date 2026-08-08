@@ -48,10 +48,8 @@ const WORKSHOP = [
   },
 ];
 
-export const revalidate = 60;
-
-export default async function HomePage() {
-  const notes = (await getPosts()).slice(0, 3);
+export default function HomePage() {
+  const notes = getPosts().slice(0, 3);
 
   return (
     <>

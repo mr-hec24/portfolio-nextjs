@@ -7,9 +7,8 @@ published_at: 2026-06-14
 excerpt: "When a wrong prediction stops being a statistics problem and starts being a student's year."
 ---
 
-> **This is placeholder body copy.** The title, category and slug are real —
-> paste your actual article over everything below this line, then run
-> `npm run publish content/posts/all-models-are-wrong.md`.
+> **Placeholder body.** The title, category and slug are real — replace
+> everything below this line with your article, then commit.
 
 Box's aphorism gets quoted in every stats course: all models are wrong, but
 some are useful. It's usually delivered as a shrug — a reminder not to fall in
