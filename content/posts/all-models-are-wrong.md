@@ -5,7 +5,7 @@ category: ethics
 status: published
 published_at: 2025-08-25
 excerpt: "If data is power, then modeling is responsibility."
-linkedin: "https://www.linkedin.com/pulse/all-models-wrong-some-wreck-lives-hector-rodriguez-gi6ac/"
+linkedin: "https://www.linkedin.com/pulse/all-models-wrong-some-wreck-lives-hector-rodriguez-gi6ac"
 ---
 
 Every time you apply for a job, take out a loan, or walk into a classroom, there's a model judging you. Most of us never see it. And that's the problem. I believe it's safe to say that we are officially in a data driven society. Any company you can possibly think of will benefit from collecting data and performing analysis on it to drive more sales, more encounters, and more interactions. We've slowly seen how data is becoming more and more important: going from polls and surveys to the annoying cookies pop-up on almost every website you visit, data collection and the models that are created from this data seems to be shoved in our faces every day. And now with the rise of the AI, LLMs, and Agentic AI, it seems that more and more people are becoming aware that these data-driven models are kind of running our world. But what happens when these models that we create become harmful? What can we do to protect ourselves from these harms?

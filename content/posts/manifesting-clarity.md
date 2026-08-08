@@ -5,6 +5,7 @@ category: tools
 status: published
 published_at: 2025-03-19
 excerpt: "A manifesto to remind us who we are and why we do what we are doing."
+linkedin: "https://www.linkedin.com/pulse/manifesting-clarity-hector-rodriguez-txeoc"
 ---
 
 It can be easy to lose sight of one's own purpose in an era where we are constantly comparing ourselves to others in media, and media constantly telling us what we should be doing with our lives if we want to live it "right". I surely am no stranger to binging self-improvement content on YouTube, TikTok, Instagram, LinkedIn, X,... I could honestly go on and on. And don't get me started on how the constant comparisons of influencers and other people online affects my mental health.

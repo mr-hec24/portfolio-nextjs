@@ -5,6 +5,7 @@ category: life
 status: published
 published_at: 2025-08-06
 excerpt: "It's counter-cultural to live a slow life in America. That's why I've failed every time."
+linkedin: "https://www.linkedin.com/pulse/hustle-trap-why-slow-living-feels-impossible-america-hector-rodriguez-tbeqc"
 ---
 
 Every time I come back from being abroad, outside of the US, I am faced with the same thought: man, life was so slow and nice, and now it's time to get on the grind again. I went to Rome for my study abroad Fall semester of 2024, and just recently, I came back from a mission trip in the Indonesian island, Flores. Although the extent of slow living and the context is completely different when comparing Rome to Flores to my time in Barcelona and Croatia as weekend trips while studying abroad, the ending conclusion is the fact that there isn't as big of a pressure to be working super hard 24/7. As someone who is always on the bridge of burning out and losing my purpose (check out my [Manifesting Clarity](/writing/manifesting-clarity) article), these moments of slowness were greatly appreciated.

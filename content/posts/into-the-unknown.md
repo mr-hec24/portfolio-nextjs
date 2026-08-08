@@ -5,6 +5,7 @@ category: life
 status: published
 published_at: 2025-03-08
 excerpt: "The unknown of the past keeps us in regret and depression, and the unknown of the future keeps us in paralysis and anxiety."
+linkedin: "https://www.linkedin.com/pulse/unknown-hector-rodriguez-to3rc"
 ---
 
 Today I needed to get out of the house and touch some grass. I know, it's taboo for a computer science and math nerd like myself to go and touch some grass, but believe me when I say it's one of my favorite past time activities. I hit up one of my friends to go on a short hike today, and we embark on our journey.

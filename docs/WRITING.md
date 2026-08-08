@@ -55,8 +55,10 @@ links back to it:
 linkedin: "https://www.linkedin.com/pulse/your-article-slug/"
 ```
 
-Strip the `?trackingId=...` query string first — it's a per-session token, not
-part of the permalink, and it doesn't belong in the repo.
+Strip everything from the `?` onwards first. LinkedIn appends `trackingId` and
+`lipi` parameters that are tied to your own session and the page you copied the
+link from — they aren't part of the permalink and don't belong in a public
+repo.
 
 **Pasting from LinkedIn.** LinkedIn's editor doesn't export markdown, so
 copy-paste needs a little cleanup: its headings arrive as plain bold lines

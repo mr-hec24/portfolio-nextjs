@@ -5,6 +5,7 @@ category: life
 status: published
 published_at: 2025-02-27
 excerpt: "In retrospect, I just don't know how to rest actively."
+linkedin: "https://www.linkedin.com/pulse/hard-reset-hector-rodriguez-vljzc"
 ---
 
 We've all heard it as a joke when something doesn't work as it should, "Did you try turning it off and on again?" Growing up in STEM and a huge fan of dad jokes and bad puns, this always makes me chuckle. ESPECIALLY in situations where it doesn't even make sense. Imagine being on a plane that takes forever to get off because of technical issues, and you hear someone say "DiD yOu TrY tUrNiNg It OfF aNd On AgAiN?" That's a knee slapper, lol.

@@ -5,6 +5,7 @@ category: education
 status: published
 published_at: 2025-04-01
 excerpt: "Both of us were at the top of our language classes, and yet the system has failed or lied to us in some sort of way."
+linkedin: "https://www.linkedin.com/pulse/mission-hector-rodriguez-ihggc"
 ---
 
 Growing up, I remember my mom learning English at a language school for the beginning portion of my life. I still remember her coming home with a bunch of notecards that have the different conjugations of irregular verbs so that she can study them at any time throughout the day. The rote repetition of these verbs over and over again should've proven to be helpful, right? Well, she couldn't graduate the class and never got her certificate.
@@ -41,7 +42,7 @@ The more one surrounds themselves in the language and attempts to utilize it on 
 
 I've tried using these and many more strategies to learn various other languages such as Korean, Vietnamese, and Italian. Have I become fluent in any of these? Nope. But the biggest issue is consistency: carving out time every single day to deliberately practice and learn the language. So that's where I come in with a possible solution to this problem: I am going to be documenting my progress online.
 
-I have just been accepted to a mission trip to Indonesia this July, so I have exactly 96 days starting today to learn Indonesian as much as possible. So today starts my 96 day journey to learn Indonesian as much as possible. I will be following Ameer Corro's Road Trip Method of learning a new language (check out his video). Long story short, we have 90-minute language learning sessions, where the first 30 minutes will be dedicated to input (vocab, guided course, or immersion) and the last 60 minutes will be dedicated to output (writing, story speaking, conversation).
+I have just been accepted to a mission trip to Indonesia this July, so I have exactly 96 days starting today to learn Indonesian as much as possible. So today starts my 96 day journey to learn Indonesian as much as possible. I will be following Ameer Corro's [Road Trip Method](/portfolio/waypoint) of learning a new language (check out his video). Long story short, we have 90-minute language learning sessions, where the first 30 minutes will be dedicated to input (vocab, guided course, or immersion) and the last 60 minutes will be dedicated to output (writing, story speaking, conversation).
 
 Let's see what my progress is like, how consistent I stay, and if I am actually able to use what I learn when I fly to Indonesia in July. I'll be posting updates on my YouTube account (@HectorLearnsLanguages), so if you want to follow along or support, check it out! In the end, this is more for me, so I hope it works.
 
