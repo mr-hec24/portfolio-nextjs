@@ -36,10 +36,23 @@ no code change.
 
 ## Setup (about 15 minutes, once)
 
-### 1. Create the project
+### 1. Pick a project — you almost certainly don't need a new one
 
-[database.new](https://database.new) → new project. Any region near you; the
-free tier is far more than a blog needs.
+**The Supabase free tier limits projects, not tables.** If you already have two
+projects, add the `posts` table to one of them rather than paying $25/mo for a
+third. A blog table has no foreign keys into app data, gets its own RLS policy,
+and adds a few KB of text — it will not interfere with Interleave or Waypoint.
+
+Prefer whichever project sees the most traffic: free projects pause after about
+a week of inactivity, and an already-busy database will never be the one that
+pauses on you.
+
+If that project already has a table named `posts`, rename this one in the
+migration (`portfolio_posts`) and set `NEXT_PUBLIC_POSTS_TABLE` to match.
+Nothing else changes.
+
+Only if you genuinely want isolation: [database.new](https://database.new) →
+new project. That's the option that costs money at your project count.
 
 ### 2. Create the table
 
@@ -143,8 +156,9 @@ chip on `/writing`.
 
 ## Why this over the alternatives
 
-I considered four options against your actual constraint — *don't make me open
-a PR to publish a paragraph*:
+Two constraints: *don't make me open a PR to publish a paragraph*, and *don't
+make me pay for a third Supabase project*. The second is solved by sharing a
+database — but here are the alternatives honestly weighed anyway:
 
 **MDX files in the repo.** The usual Next.js answer, and the one to reject
 here: every post is a commit, a push, and a redeploy. That's precisely the
@@ -158,13 +172,31 @@ author writing essays, it's a lot of surface area.
 rate-limited, the block-to-markdown conversion is lossy for anything
 non-trivial, and you inherit Notion's uptime for your site's content.
 
-**Supabase — recommended.** You already run it in Interleave, Waypoint, and
-Phoenix Soteria, so it's zero new concepts: same dashboard, same client
-library, same mental model for RLS. Postgres means real queries later (search,
-tags, related posts, view counts) without a migration to something bigger.
-Free tier covers this comfortably. The one real cost is that there's no
-built-in editor — which is what `publish.mjs` exists to solve, and honestly
-writing in your own editor beats writing in a web textarea.
+**Neon.** Postgres like Supabase, and its free tier is more generous on
+project count if you want the blog genuinely isolated. Because every query here
+is server-side, you don't need RLS at all — a connection string in a server env
+var is enough. This is the one to switch to if sharing a database ever bothers
+you. Cost: a second vendor, and re-doing the auth model.
+
+**Turso (libSQL/SQLite).** Very generous free tier, edge-replicated, fast. A
+fine fit technically, but it's a new service and a new client library to learn
+for a blog that gets a handful of posts a year.
+
+**Git commits from a script — the strongest zero-infra option.** A publish
+script can copy the markdown into `content/posts/`, commit, and push; the host
+rebuilds automatically. No database, no vendor, no limits, and content is
+version-controlled alongside the code. The catch is a ~40s rebuild per post and
+no publishing from a device without the repo. If you ever want to drop the
+database entirely, this is the path — the local-markdown reader in
+`src/lib/posts.ts` already does exactly this, so it's mostly deleting code.
+
+**Supabase in an existing project — recommended.** Zero new concepts (same
+dashboard, same client, same RLS model), zero new cost, and it keeps the
+instant-publish behaviour with no redeploy. Postgres means real queries later —
+search, tags, related posts, view counts — without migrating to something
+bigger. The one real gap is that there's no built-in editor, which is what
+`publish.mjs` exists to solve; writing in your own editor beats a web textarea
+anyway.
 
 ---
 

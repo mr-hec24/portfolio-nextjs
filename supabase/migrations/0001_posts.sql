@@ -1,5 +1,10 @@
 -- Writing / Notes storage for the portfolio.
 --
+-- This can run inside an EXISTING Supabase project — the free tier limits
+-- projects, not tables. If that project already has a `posts` table, rename
+-- this one (e.g. portfolio_posts) here and set NEXT_PUBLIC_POSTS_TABLE to
+-- match; nothing else changes.
+--
 -- Design goals:
 --   * The public site reads published posts anonymously (anon key, RLS-gated).
 --   * Only the service-role key (used by scripts/publish.mjs, never shipped to

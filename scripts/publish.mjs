@@ -95,8 +95,10 @@ const supabase = createClient(SUPABASE_URL, SERVICE_KEY, {
   auth: { persistSession: false },
 });
 
+const TABLE = process.env.NEXT_PUBLIC_POSTS_TABLE || "posts";
+
 const { error } = await supabase
-  .from("posts")
+  .from(TABLE)
   .upsert(row, { onConflict: "slug" });
 
 if (error) die(`Supabase rejected the upsert: ${error.message}`);

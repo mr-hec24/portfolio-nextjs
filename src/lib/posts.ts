@@ -65,6 +65,13 @@ function fromRow(row: PostRow): Post {
 
 const COLUMNS = "slug,title,excerpt,body,category,read_minutes,published_at";
 
+/**
+ * Table name, so this can live inside an existing Supabase project without
+ * colliding with that app's own tables. Supabase's free tier limits projects,
+ * not tables — sharing a database beats paying for a third project.
+ */
+const TABLE = process.env.NEXT_PUBLIC_POSTS_TABLE || "posts";
+
 // ---------------------------------------------------------------------------
 // Local markdown source (fallback + seed content)
 // ---------------------------------------------------------------------------
@@ -116,7 +123,7 @@ export async function getPosts(): Promise<Post[]> {
   if (!usingSupabase) return localPosts();
 
   const { data, error } = await client()
-    .from("posts")
+    .from(TABLE)
     .select(COLUMNS)
     .order("published_at", { ascending: false });
 
@@ -136,7 +143,7 @@ export async function getPost(slug: string): Promise<Post | null> {
   }
 
   const { data, error } = await client()
-    .from("posts")
+    .from(TABLE)
     .select(COLUMNS)
     .eq("slug", slug)
     .maybeSingle();
