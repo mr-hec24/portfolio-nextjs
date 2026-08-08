@@ -1,16 +1,46 @@
 ---
 title: "Hard Reset"
 slug: hard-reset
-category: education
-status: draft
-published_at:
-excerpt: ""
-linkedin: ""
+category: life
+status: published
+published_at: 2025-02-27
+excerpt: "In retrospect, I just don't know how to rest actively."
 ---
 
-Not yet migrated. Paste the LinkedIn article body here, fill in `published_at`,
-`excerpt` and `linkedin` above, then flip `status` to `published`.
+We've all heard it as a joke when something doesn't work as it should, "Did you try turning it off and on again?" Growing up in STEM and a huge fan of dad jokes and bad puns, this always makes me chuckle. ESPECIALLY in situations where it doesn't even make sense. Imagine being on a plane that takes forever to get off because of technical issues, and you hear someone say "DiD yOu TrY tUrNiNg It OfF aNd On AgAiN?" That's a knee slapper, lol.
 
-It's held as a draft rather than published because its previous date was a
-placeholder invented by the design, which would have sorted this above the real
-articles on the index.
+Although this is a joke that is used often, its message can be taken as philosophical advice throughout our lives. The idea of a "hard reset" or turning our minds or lives "off and on again" is a metaphor for having a clean slate to start over. I've used this multiple times throughout my life, whether in natural resets (New Years, 1st of a new month, 1st of a new academic quarter, start of a new relationship, etc.) or more intentional resets (starting a new habit, starting a new job, etc.). It's important to understand that we are given multiple chances to reset throughout our lives, so even when we are in a rut or feeling restless, these natural resets offer a way out of whatever situation we may find ourselves in.
+
+Granted, all of this is easier said than done. I am no stranger to the failure of a hard reset. I mean, how often do we set new goals and resolutions at New Years only to fall short of them by January 15th? I can tell you I have a 100% record of failing. Even starting new habits, new morning routines, new evening routines, and new mentalities fall apart and crumble pretty quickly. It almost seems like when you turn something off and on again, you may have fixed the direct situation, but ended up covering the underlying issue of whatever it is you are turning on again.
+
+## My Story
+
+I want to share my story, and it's not a story where I have it all figured out. Heck, even in me writing and publishing this very article is a hard reset attempt for me right now. But it all started in Winter Quarter of 2024. Be me, a third year at the University of Denver studying for a bachelor's degree of science in both Computer Science and Mathematics. (I don't say any of this to brag, but rather to paint a picture of where I was). I worked various jobs at a time, including doing research for Dr. Stephen Hutt, tutoring for the Ritchie School of Engineering and Computer Science, doing my own freelance tutoring for business students taking calculus, mentoring a group of about five first-years through Equity in STEM (E-STEM), being President of the Math Club, Treasurer of the Algorithms Club, and Social Media Liaison for the American Indian Science and Engineering Society. Honestly, there might be more that I am forgetting, but you get the picture, right?
+
+I was STRETCHED out extremely thin across all of my academics and responsibilities. But I like being busy, it keeps me attentive to my time and on top of my classes. There's a saying, "If you want to get something done, give it to the busy person." That was until I started to break.
+
+I'm not entirely sure where I started to break, or what was the definitive moment in which I started to break and fall apart, but I do know that suddenly my grades started tanking, I started avoiding my responsibilities for the clubs, and the quality of my research, mentoring, and tutoring started to diminish. It almost all happened at once. I still managed to pass the quarter, but man, my energy and morale was completely depleted.
+
+That spring break (Spring Break 2024), I went to Rome for a pilgrimage to the Vatican and the small town of Assisi in Italy. This was a soft, natural reset for me, where all I had to do was relax and pray the whole time. Surely, this is the break I needed, right? While my spirituality has increased and I came back to Denver more devout than ever, I still lacked the energy and morale to maintain all of my responsibilities. Nonetheless, the quarter flew by and I barely survived. Thanks be to God, I am going away from all of those responsibilities so I can rest and come back my senior year as an academic weapon.
+
+Or so I thought. Thankfully, I had a full-time internship in Seattle with Accenture as an AI Consulting Specialist. I was thankful to have this opportunity, surely being in Seattle will be my time to rest and reset. However, I remember that I am going to study abroad in Rome at John Cabot University of the Fall Semester of 2024. That meant I had to work hard and save up as much money as possible to be able to enjoy being abroad without having to worry about finances. So the summer, I worked my butt off at Accenture and as a part-time researcher for Stephen Hutt. It was brutal, but I managed to save up enough money to be comfortable abroad.
+
+So now, being abroad in Rome was going to be my time to reset and relax. Not quite, unfortunately. Although I was taking "easy" classes, I ended up forgetting the "study" portion of "study abroad". One might think that this means I've successfully recharged and reset then for the rest of my senior year, right? Nope. Turns out traveling and being sick can be just as energy consuming as being in hundreds of clubs and jobs and classes.
+
+I come back from being abroad, into winter break. Clearly this is my time for rest and recharge, I thought. I didn't have a job, no classes to worry about, and no money so even if I wanted to travel, I wasn't able to. This is my chance to take it easy and relax at home. Although I did stay at home most days watching TV and playing video games, I felt restless the whole entire time. So I was unable to rest and recharge.
+
+Ok, well, the Winter Quarter of 2025 is starting up, and I choose to just not join that many clubs. I still didn't have a job, so all I have to worry about are my classes, two of which are extremely easy, and one which I knew I would struggle in. But having just one class to worry about is more manageable compared to Winter Quarter of 2024, so I thought I'd have time to reset and recharge here. Well, I wish I could say yes, but I feel a lack of motivation and drive to get anything done, and it's the end of Week 8 as I publish this.
+
+## Takeaways
+
+Given all this, I tried taking advantage of different reset points throughout this rollercoaster to be able to recharge (new job, new location, new language, new relationship, new year, new quarter, etc), but clearly I was doing something wrong. In retrospect, I just don't know how to rest actively. I've been dealing with burnout since last year, and I still haven't been able to figure out how to rest intentionally and productively to the point that my energy is recharged. I'm running on fumes right now, and still have one more quarter to graduate. I still don't have a job, and although I have a return offer from Accenture starting in September, I don't have a clue of what I will be doing to sustain myself during the summer.
+
+I have learned a lot about myself though, especially during the summer in Seattle and the fall in Rome. I learned that I do recharge a little bit when I am hiking, climbing, or in the gym. Recently I joined an intramural volleyball team at DU, and it's been a ton of fun to have some sort of game to look forward to. In the same sense, I am a sucker for board games. I didn't play any board games until my friends, Jeffer and Madelyn, visited me in Seattle, where we played board games for hours. I'm not sure if I recharged a little bit because of the board games, or because I had some quality time with friends, but regardless, this moment was crucial.
+
+I also tapped into my creative side while I was abroad. I took a sketching class, and I looked forward to every assignment that the professor gave us. This was my chance to escape into a museum, to sit along the Tiber River, or enjoy a latte at a café by myself and slow down the time by sketching something interesting I saw. In addition to sketching, I also took up poetry, and I can say that I've been able to use poetry as a means to express some frustrations and emotions that I normally wouldn't be able to express if I just journaled.
+
+Although I've learned all these things about myself and how I recharge little by little, coming back to the states of America makes it almost impossible to be intentional about resting, especially since everything costs money and I still don't have a job. Not to mention, the fact that this capitalist society feels like it's always pressuring me to be productive 24/7 and not waste a single minute or second. So I spend most of my time asleep, or procrastinating school work by applying to jobs and trying to start my own business with one of my friends.
+
+## Conclusion
+
+In the end, I still have a long way to go. I don't think I am alone in this feeling of constantly working and getting burned out, if that even is what I am feeling. I know a lot of my classmates are stressed about the uncertainty of the future with no guarantee of a job right out of college, and even now no job to sustain themselves. Others deal with mental health issues that makes it harder to wake up or put in energy into activities that they love. I don't know the answers, but I do want to say that you are not alone if you feel anything I feel, even if it's similar by a hair. I hope that by documenting my story and progress throughout my twenties will be helpful and beneficial to others.
