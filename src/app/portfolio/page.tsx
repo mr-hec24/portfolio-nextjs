@@ -9,7 +9,6 @@ import {
   Button,
   Eyebrow,
   LearnMore,
-  Placeholder,
   Tags,
 } from "@/components/ui";
 
@@ -60,9 +59,12 @@ export default function PortfolioPage() {
           </div>
           <Link href="/portfolio/interleave" className="proj block">
             <div className="proj-media mb-[30px] overflow-hidden">
-              <Placeholder
-                label="interleave — scheduler view, or an interactive utility-score preview"
-                className="h-[430px]"
+              <Image
+                src="/images/portfolio/interleave-hero.png"
+                alt="Interleave — the practice garden, showing which skill to practise next"
+                width={1225}
+                height={771}
+                className="h-[430px] w-full border border-line-2 object-cover object-top"
               />
             </div>
           </Link>
@@ -177,9 +179,12 @@ export default function PortfolioPage() {
           </div>
           <Link href="/portfolio/waypoint" className="proj block">
             <div className="proj-media overflow-hidden">
-              <Placeholder
-                label="story-speaking review workbench"
-                className="h-[262px]"
+              <Image
+                src="/images/portfolio/waypoint-hero.png"
+                alt="Waypoint — the daily roadtrip dashboard with input and output minutes"
+                width={1225}
+                height={762}
+                className="h-[262px] w-full border border-line-2 object-cover object-top"
               />
             </div>
           </Link>

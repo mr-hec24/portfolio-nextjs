@@ -10,7 +10,6 @@ import {
   Eyebrow,
   LearnMore,
   Meta,
-  Placeholder,
   SectionRule,
   Tags,
 } from "@/components/ui";
@@ -28,7 +27,7 @@ const WORKSHOP = [
     title: "Waypoint",
     blurb:
       "Turns your own spoken mistakes into spaced-repetition cards inside a structured immersion session.",
-    image: null,
+    image: "/images/portfolio/waypoint-hero.png",
   },
   {
     href: "/portfolio/fil-learning",
@@ -36,7 +35,7 @@ const WORKSHOP = [
     title: "Fall In Love Learning",
     blurb:
       "A landing page and free college-application resource hub for a new tutoring company.",
-    image: "/images/portfolio/fil-learning-hero.png" as string | null,
+    image: "/images/portfolio/fil-learning-hero.png",
   },
   {
     href: "/portfolio/phoenix-soteria",
@@ -130,10 +129,13 @@ export default function HomePage() {
       <div className="mx-auto max-w-[1280px] px-6 pt-[70px] md:px-11">
         <Reveal className="grid items-center gap-11 border-b border-line pb-14 lg:grid-cols-[1.02fr_.98fr]">
           <Link href="/portfolio/interleave" className="proj block">
-            <div className="proj-media overflow-hidden">
-              <Placeholder
-                label="interleave — app screenshot, 16:10"
-                className="h-[352px]"
+            <div className="proj-media overflow-hidden border border-line-2">
+              <Image
+                src="/images/portfolio/interleave-hero.png"
+                alt="Interleave — the practice garden, showing which skill to practise next"
+                width={1225}
+                height={771}
+                className="h-[352px] w-full object-cover object-top"
               />
             </div>
           </Link>
@@ -214,17 +216,13 @@ export default function HomePage() {
                 className="proj block h-full border border-line-2 bg-bg p-[22px]"
               >
                 <div className="proj-media mb-[18px] overflow-hidden">
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt=""
-                      width={480}
-                      height={260}
-                      className="h-[104px] w-full border border-line object-cover"
-                    />
-                  ) : (
-                    <Placeholder className="h-[104px]" />
-                  )}
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={480}
+                    height={260}
+                    className="h-[104px] w-full border border-line object-cover object-top"
+                  />
                 </div>
                 <Badge kind={item.badge.kind}>{item.badge.text}</Badge>
                 <h3 className="mb-2 mt-3.5 font-display text-[23px] font-medium">

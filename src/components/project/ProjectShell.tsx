@@ -95,7 +95,7 @@ export default function ProjectShell({
             width={1280}
             height={470}
             priority
-            className="h-[280px] w-full border border-line-2 object-cover md:h-[470px]"
+            className="h-[280px] w-full border border-line-2 object-cover object-top md:h-[470px]"
           />
         ) : (
           <Placeholder label={heroLabel} className="h-[280px] md:h-[470px]" />

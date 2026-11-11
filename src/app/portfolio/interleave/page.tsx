@@ -9,7 +9,7 @@ import ProjectShell, {
   Points,
   ProjectSection,
 } from "@/components/project/ProjectShell";
-import { Placeholder } from "@/components/ui";
+import Image from "next/image";
 
 export default function InterleaveProjectPage() {
   return (
@@ -34,7 +34,8 @@ export default function InterleaveProjectPage() {
           variant: "outline",
         },
       ]}
-      heroLabel="hero — full scheduler screen, or an embedded interactive demo"
+      hero="/images/portfolio/interleave-hero.png"
+      heroAlt="Interleave — the practice garden, showing which skill to practise next and current retrievability"
       previous={{ href: "/portfolio/waypoint", title: "Waypoint" }}
       next={{
         href: "/portfolio/assistments",
@@ -179,12 +180,18 @@ export default function InterleaveProjectPage() {
       </ProjectSection>
 
       <ProjectSection label="06 / GALLERY" last>
-        <div className="grid max-w-[66ch] gap-5">
-          <Placeholder
-            label="model roadmap — closed-form v1 → learned decay v2 → transfer GNN v3"
-            className="h-[250px]"
+        <figure className="max-w-[66ch]">
+          <Image
+            src="/images/portfolio/interleave-practice.png"
+            alt="A retrieval prompt mid-session: the skill, the question, and an 'I've attempted it' button with no timer"
+            width={1227}
+            height={767}
+            className="h-[250px] w-full border border-line-2 object-cover object-top"
           />
-        </div>
+          <figcaption className="mt-3 font-mono text-[10.5px] tracking-[0.05em] text-muted">
+            a retrieval prompt mid-session — no timer, you return when you&apos;ve attempted it
+          </figcaption>
+        </figure>
       </ProjectSection>
     </ProjectShell>
   );

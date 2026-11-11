@@ -8,7 +8,7 @@ import ProjectShell, {
   Points,
   ProjectSection,
 } from "@/components/project/ProjectShell";
-import { Placeholder } from "@/components/ui";
+import Image from "next/image";
 
 export default function WaypointProjectPage() {
   return (
@@ -34,7 +34,8 @@ export default function WaypointProjectPage() {
           variant: "outline",
         },
       ]}
-      heroLabel="hero — story-speaking review workbench"
+      hero="/images/portfolio/waypoint-hero.png"
+      heroAlt="Waypoint — the daily roadtrip dashboard with the destination, input and output minutes, and the week's route"
       previous={{
         href: "/portfolio/assistments",
         title: "ASSISTments — mastery learning service",
@@ -140,12 +141,18 @@ export default function WaypointProjectPage() {
       </ProjectSection>
 
       <ProjectSection label="05 / GALLERY" last>
-        <div className="grid max-w-[66ch] gap-5">
-          <Placeholder
-            label="story-speaking cycle — record → transcribe → correct → mine → study → retake"
-            className="h-[250px]"
+        <figure className="max-w-[66ch]">
+          <Image
+            src="/images/portfolio/waypoint-session.png"
+            alt="A session block in progress: a countdown to the next stop, with input and output segments and a fork to switch early"
+            width={1223}
+            height={767}
+            className="h-[250px] w-full border border-line-2 object-cover object-top"
           />
-        </div>
+          <figcaption className="mt-3 font-mono text-[10.5px] tracking-[0.05em] text-muted">
+            a session block running — input, then the fork to output
+          </figcaption>
+        </figure>
       </ProjectSection>
     </ProjectShell>
   );
