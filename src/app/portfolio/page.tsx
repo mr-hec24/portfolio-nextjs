@@ -51,17 +51,17 @@ export default function PortfolioPage() {
       </section>
 
       <div className="mx-auto max-w-[1280px] px-6 md:px-11">
-        {/* ---------------- 01 Interleave ---------------- */}
+        {/* ---------------- 01 Interleaf ---------------- */}
         <Reveal className="pt-14">
           <div className="mb-[22px] flex items-baseline gap-3.5">
             <span className="font-mono text-[30px] text-ghost">01</span>
             <Badge kind="labs">HEC LABS</Badge>
           </div>
-          <Link href="/portfolio/interleave" className="proj block">
+          <Link href="/portfolio/interleaf" className="proj block">
             <div className="proj-media mb-[30px] overflow-hidden">
               <Image
-                src="/images/portfolio/interleave-hero.png"
-                alt="Interleave — the practice garden, showing which skill to practise next"
+                src="/images/portfolio/interleaf-hero.png"
+                alt="Interleaf — the practice garden, showing which skill to practise next"
                 width={1225}
                 height={771}
                 className="h-[430px] w-full border border-line-2 object-cover object-top"
@@ -71,13 +71,13 @@ export default function PortfolioPage() {
           <div className="grid gap-14 border-b border-line pb-[62px] lg:grid-cols-[1fr_1.15fr]">
             <div>
               <h2 className="mb-3 font-display text-[36px] font-normal leading-[1.06] tracking-[-0.015em] md:text-[46px]">
-                Interleave
+                Interleaf
               </h2>
               <p className="mb-[22px] font-display text-[19px] italic leading-[1.45] text-ink-3">
                 The practice conductor — which skill next, and for how long.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="/portfolio/interleave">Learn more</Button>
+                <Button href="/portfolio/interleaf">Learn more</Button>
                 <Button
                   href="https://github.com/mr-hec24"
                   variant="outline"
@@ -92,7 +92,7 @@ export default function PortfolioPage() {
                 People learning several unrelated skills at once have no tool
                 that optimizes across domains. Spaced-repetition apps tell you
                 when to review a card; none of them decide which skill to work on
-                next. Interleave scores every skill each tick against memory
+                next. Interleaf scores every skill each tick against memory
                 decay, desirable-difficulty urgency, cognitive fatigue and
                 prerequisite readiness, then switches only when a rival skill
                 wins by a margin — so session length is emergent rather than a

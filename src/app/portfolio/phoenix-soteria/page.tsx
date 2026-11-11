@@ -25,7 +25,7 @@ export default function PhoenixSoteriaProjectPage() {
         href: "/portfolio/fil-learning",
         title: "Fall In Love Learning",
       }}
-      next={{ href: "/portfolio/interleave", title: "Interleave" }}
+      next={{ href: "/portfolio/interleaf", title: "Interleaf" }}
     >
       <ProjectSection label="01 / THE PROBLEM">
         <Lead>
