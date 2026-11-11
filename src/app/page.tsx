@@ -10,15 +10,14 @@ import {
   Eyebrow,
   LearnMore,
   Meta,
-  Placeholder,
   SectionRule,
   Tags,
 } from "@/components/ui";
 import { getPosts } from "@/lib/posts";
 
 const DESK = [
-  "Building out the Interleave user experience to promote retrieval.",
-  "Thinking through the parameters of Interleave's new algorithm, making sure none of them rest on assumptions that are false.",
+  "Building out the Interleaf user experience to promote retrieval.",
+  "Thinking through the parameters of Interleaf's new algorithm, making sure none of them rest on assumptions that are false.",
 ];
 
 const WORKSHOP = [
@@ -28,7 +27,7 @@ const WORKSHOP = [
     title: "Waypoint",
     blurb:
       "Turns your own spoken mistakes into spaced-repetition cards inside a structured immersion session.",
-    image: null,
+    image: "/images/portfolio/waypoint-hero.png",
   },
   {
     href: "/portfolio/fil-learning",
@@ -36,7 +35,7 @@ const WORKSHOP = [
     title: "Fall In Love Learning",
     blurb:
       "A landing page and free college-application resource hub for a new tutoring company.",
-    image: "/images/portfolio/fil-learning-hero.png" as string | null,
+    image: "/images/portfolio/fil-learning-hero.png",
   },
   {
     href: "/portfolio/phoenix-soteria",
@@ -106,7 +105,7 @@ export default function HomePage() {
             <Eyebrow className="flex-none">01 / SELECTED WORK</Eyebrow>
             <span className="h-px flex-1 bg-line-2" />
             <span className="hidden text-[13px] text-muted lg:inline">
-              Interleave · ASSISTments BKT · Waypoint
+              Interleaf · ASSISTments BKT · Waypoint
             </span>
           </div>
         </div>
@@ -126,14 +125,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------------- Featured: Interleave ---------------- */}
+      {/* ---------------- Featured: Interleaf ---------------- */}
       <div className="mx-auto max-w-[1280px] px-6 pt-[70px] md:px-11">
         <Reveal className="grid items-center gap-11 border-b border-line pb-14 lg:grid-cols-[1.02fr_.98fr]">
-          <Link href="/portfolio/interleave" className="proj block">
-            <div className="proj-media overflow-hidden">
-              <Placeholder
-                label="interleave — app screenshot, 16:10"
-                className="h-[352px]"
+          <Link href="/portfolio/interleaf" className="proj block">
+            <div className="proj-media overflow-hidden border border-line-2">
+              <Image
+                src="/images/portfolio/interleaf-hero.png"
+                alt="Interleaf — the practice garden, showing which skill to practise next"
+                width={1225}
+                height={771}
+                className="h-[352px] w-full object-cover object-top"
               />
             </div>
           </Link>
@@ -143,7 +145,7 @@ export default function HomePage() {
               <Meta>v1 · IN DEVELOPMENT</Meta>
             </div>
             <h2 className="mb-3.5 font-display text-[32px] font-normal leading-[1.1] tracking-[-0.01em] md:text-[42px]">
-              Interleave
+              Interleaf
             </h2>
             <p className="mb-[22px] max-w-[44ch] text-[16.5px] leading-[1.65] text-ink-2 text-pretty">
               A cross-domain practice scheduler that decides which skill you
@@ -156,7 +158,7 @@ export default function HomePage() {
                 items={["TypeScript", "Supabase", "FSRS scheduling", "Embeddings"]}
               />
             </div>
-            <Link href="/portfolio/interleave" className="proj block max-w-fit">
+            <Link href="/portfolio/interleaf" className="proj block max-w-fit">
               <LearnMore />
             </Link>
           </div>
@@ -214,17 +216,13 @@ export default function HomePage() {
                 className="proj block h-full border border-line-2 bg-bg p-[22px]"
               >
                 <div className="proj-media mb-[18px] overflow-hidden">
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt=""
-                      width={480}
-                      height={260}
-                      className="h-[104px] w-full border border-line object-cover"
-                    />
-                  ) : (
-                    <Placeholder className="h-[104px]" />
-                  )}
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={480}
+                    height={260}
+                    className="h-[104px] w-full border border-line object-cover object-top"
+                  />
                 </div>
                 <Badge kind={item.badge.kind}>{item.badge.text}</Badge>
                 <h3 className="mb-2 mt-3.5 font-display text-[23px] font-medium">

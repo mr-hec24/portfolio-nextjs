@@ -1,4 +1,4 @@
-// src/app/portfolio/interleave/page.tsx
+// src/app/portfolio/interleaf/page.tsx
 
 import React from "react";
 import ProjectShell, {
@@ -9,15 +9,15 @@ import ProjectShell, {
   Points,
   ProjectSection,
 } from "@/components/project/ProjectShell";
-import { Placeholder } from "@/components/ui";
+import Image from "next/image";
 
-export default function InterleaveProjectPage() {
+export default function InterleafProjectPage() {
   return (
     <ProjectShell
-      breadcrumb="INTERLEAVE"
+      breadcrumb="INTERLEAF"
       badge={{ kind: "labs", text: "HEC LABS" }}
       category="AI & LEARNING SCIENCE"
-      title="Interleave"
+      title="Interleaf"
       dek="A cross-domain practice scheduler — which skill next, and for how long."
       tags={[
         "TypeScript",
@@ -34,7 +34,8 @@ export default function InterleaveProjectPage() {
           variant: "outline",
         },
       ]}
-      heroLabel="hero — full scheduler screen, or an embedded interactive demo"
+      hero="/images/portfolio/interleaf-hero.png"
+      heroAlt="Interleaf — the practice garden, showing which skill to practise next and current retrievability"
       previous={{ href: "/portfolio/waypoint", title: "Waypoint" }}
       next={{
         href: "/portfolio/assistments",
@@ -127,10 +128,10 @@ export default function InterleaveProjectPage() {
 
       <ProjectSection label="04 / SCIENTIFIC HONESTY">
         <Body>
-          Interleave is careful about what it claims. The classic interleaving
+          Interleaf is careful about what it claims. The classic interleaving
           effect — the one that makes shuffled practice beat blocked practice —
           depends on similar, confusable categories and does not transfer to
-          unrelated domains (Brunmair &amp; Richter, 2019). So Interleave never
+          unrelated domains (Brunmair &amp; Richter, 2019). So Interleaf never
           claims that effect for cross-domain switching.
         </Body>
         <Body>
@@ -150,7 +151,7 @@ export default function InterleaveProjectPage() {
 
       <ProjectSection label="05 / INTENDED IMPACT">
         <Body>
-          Interleave is in early development (v1), so these are framed as{" "}
+          Interleaf is in early development (v1), so these are framed as{" "}
           <strong className="text-ink">intended</strong> outcomes rather than
           achieved results.
         </Body>
@@ -179,12 +180,18 @@ export default function InterleaveProjectPage() {
       </ProjectSection>
 
       <ProjectSection label="06 / GALLERY" last>
-        <div className="grid max-w-[66ch] gap-5">
-          <Placeholder
-            label="model roadmap — closed-form v1 → learned decay v2 → transfer GNN v3"
-            className="h-[250px]"
+        <figure className="max-w-[66ch]">
+          <Image
+            src="/images/portfolio/interleaf-practice.png"
+            alt="A retrieval prompt mid-session: the skill, the question, and an 'I've attempted it' button with no timer"
+            width={1227}
+            height={767}
+            className="h-[250px] w-full border border-line-2 object-cover object-top"
           />
-        </div>
+          <figcaption className="mt-3 font-mono text-[10.5px] tracking-[0.05em] text-muted">
+            a retrieval prompt mid-session — no timer, you return when you&apos;ve attempted it
+          </figcaption>
+        </figure>
       </ProjectSection>
     </ProjectShell>
   );

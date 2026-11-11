@@ -59,7 +59,7 @@ export default function AssistmentsProjectPage() {
       ]}
       hero="/images/portfolio/assistments-hero.png"
       heroAlt="ASSISTments mastery learning service"
-      previous={{ href: "/portfolio/interleave", title: "Interleave" }}
+      previous={{ href: "/portfolio/interleaf", title: "Interleaf" }}
       next={{ href: "/portfolio/waypoint", title: "Waypoint" }}
     >
       <ProjectSection label="01 / THE PROBLEM">
